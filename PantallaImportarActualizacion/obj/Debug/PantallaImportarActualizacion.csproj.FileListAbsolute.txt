@@ -1,0 +1,33 @@
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.csprojAssemblyReference.cache
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.Form1.resources
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.ImportarActualizacionVino.resources
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.Properties.Resources.resources
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.csproj.GenerateResource.cache
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.csproj.CoreCompileInputs.cache
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.exe.config
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.exe
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.pdb
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.exe
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.pdb
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.exe.config
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.exe
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.pdb
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.csprojAssemblyReference.cache
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.Form1.resources
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.ImportarActualizacionVino.resources
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.Properties.Resources.resources
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.csproj.GenerateResource.cache
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.csproj.CoreCompileInputs.cache
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.exe
+C:\Users\Agustin Succar\Desktop\Facultad\Diseño de Sistemas\2024\PPAI\PPAI\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.pdb
+C:\Users\Admin\Desktop\PPAI v2\PantallaImportarActualizacion\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.exe.config
+C:\Users\Admin\Desktop\PPAI v2\PantallaImportarActualizacion\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.exe
+C:\Users\Admin\Desktop\PPAI v2\PantallaImportarActualizacion\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.pdb
+C:\Users\Admin\Desktop\PPAI v2\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\PPAI v2\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.Form1.resources
+C:\Users\Admin\Desktop\PPAI v2\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.ImportarActualizacionVino.resources
+C:\Users\Admin\Desktop\PPAI v2\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.Properties.Resources.resources
+C:\Users\Admin\Desktop\PPAI v2\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\PPAI v2\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\PPAI v2\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.exe
+C:\Users\Admin\Desktop\PPAI v2\PantallaImportarActualizacion\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.pdb
