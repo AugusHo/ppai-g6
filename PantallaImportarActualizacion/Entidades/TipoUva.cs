@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PantallaImportarActualizacion.Entidades
+namespace ActualizarVinos.Entidades
 {
     public class TipoUva
     {

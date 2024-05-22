@@ -1,7 +1,7 @@
-﻿using PantallaImportarActualizacion.Entidades;
+﻿using ActualizarVinos.Entidades;
 using System.Windows.Forms;
 
-namespace PantallaImportarActualizacion
+namespace ActualizarVinos
 {
     public partial class ImportarActualizacionVino : Form
     {

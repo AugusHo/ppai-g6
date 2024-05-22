@@ -1,4 +1,4 @@
-﻿namespace PantallaImportarActualizacion
+﻿namespace ActualizarVinos
 {
     partial class Form1
     {
