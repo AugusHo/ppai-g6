@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace PantallaImportarActualizacion
 {
-    public partial class opcionObtenerActualizacion : Form
+    public partial class pantallaActualizarBodega : Form
     {
         GestorImportadorBodega gestor = new GestorImportadorBodega();
-        public opcionObtenerActualizacion()
+        public pantallaActualizarBodega()
         {
             InitializeComponent();
             cmbBodegas.Enabled = false;
