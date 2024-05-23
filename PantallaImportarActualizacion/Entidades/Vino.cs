@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ActualizarVinos.Entidades
+namespace PantallaImportarActualizacion.Entidades
 {
     public class Vino
     {
         private string añada;
+        private string fechaActualizacion;
         private string imagenEtiqueta;
         private string nombre;
         private int notaDeCataBodega;
@@ -67,6 +65,37 @@ namespace ActualizarVinos.Entidades
         {
             get => maridaje;
             set => maridaje = value;
+        }
+
+        public bool sosParaActualizar( string nombreAllVino, string nombreVinoAct )
+        {
+            if (nombreAllVino == nombreVinoAct) 
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public void setPrecio(float precio)
+        {
+            this.precioARS = precio;
+        }
+
+        /*public void setNotaCata(int notaDeCataBodega)
+        {
+            for (int i = 0; i < .nota;
+            this.setNotaCata = notaDeCataBodega;
+        }*/
+
+        public void setImagenEtiqueta(string imagenEtiqueta)
+        {
+            this.imagenEtiquetaVino = imagenEtiqueta;
+        }
+
+        public void setFechaActualizacion( DateTime fechaActual)
+        {
+            string fechaActualString = fechaActual.ToString("dd-MM-yyyy");
+            this.fechaActualizacion = fechaActualString;
         }
     }
 }

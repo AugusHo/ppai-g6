@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ActualizarVinos.Entidades
+namespace PantallaImportarActualizacion.Entidades
 {
     public class Bodega
     {
@@ -13,6 +10,7 @@ namespace ActualizarVinos.Entidades
         private string nombre;
         private bool periodoActualizacion;
         private int coordenadasUbicacion;
+        public Vino Vino { get; set; }
 
         public Bodega(string descripcionBodega, string historiaBodega, string nombreBodega, bool periodoActualizacionBodega, int coordenadasUbicacionBodega)
         {
@@ -61,6 +59,31 @@ namespace ActualizarVinos.Entidades
         public bool estaParaActualizarNovedadesVino()
         {
             return periodoActualizacion;
+        }
+
+        public bool esTuVino(string nombreBodegaVino, string nombreBodega)
+        {
+            if (nombreBodegaVino == nombreBodega)
+            {
+                return true;
+            };
+            return false;
+        }
+
+        public void actualizarDatosDeVino(Vino listaVinosActualizadosBodega, Bodega bodegaSeleccionada, List<Vino> allVinos, DateTime fechaActual)
+        {
+            for (int i = 0; i < allVinos.Count; i++)
+            {
+                bool vinoActual = Vino.sosParaActualizar(allVinos[i].nombreVino, listaVinosActualizadosBodega.nombreVino);
+                if (vinoActual == true)
+                {
+                    allVinos[i].setPrecio(listaVinosActualizadosBodega.precioARSVino);
+                    //allVinos[i].setNotaCata(listaVinosActualizadosBodega.notaDeCataBodegaVino);
+                    allVinos[i].setImagenEtiqueta(listaVinosActualizadosBodega.imagenEtiquetaVino);
+                    allVinos[i].setFechaActualizacion(fechaActual);
+                }
+            }
+
         }
     }
 }
