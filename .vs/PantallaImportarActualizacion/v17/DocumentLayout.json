@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\PantallaImportarActualizacion\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FF4A769F-215F-426B-B873-6CEB308CA3BF}|PantallaImportarActualizacion\\PantallaImportarActualizacion.csproj|c:\\users\\admin\\desktop\\nueva carpeta\\pantallaimportaractualizacion\\pantallaimportaractualizacion\\entidades\\gestorimportadorbodega.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FF4A769F-215F-426B-B873-6CEB308CA3BF}|PantallaImportarActualizacion\\PantallaImportarActualizacion.csproj|solutionrelative:pantallaimportaractualizacion\\entidades\\gestorimportadorbodega.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GestorImportadorBodega.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\PantallaImportarActualizacion\\PantallaImportarActualizacion\\Entidades\\GestorImportadorBodega.cs",
+              "RelativeDocumentMoniker": "PantallaImportarActualizacion\\Entidades\\GestorImportadorBodega.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\Nueva carpeta\\PantallaImportarActualizacion\\PantallaImportarActualizacion\\Entidades\\GestorImportadorBodega.cs",
+              "RelativeToolTip": "PantallaImportarActualizacion\\Entidades\\GestorImportadorBodega.cs",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAvwEgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-22T21:03:06.177Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
