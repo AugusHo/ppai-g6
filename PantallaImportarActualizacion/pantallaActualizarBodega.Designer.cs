@@ -79,7 +79,7 @@
             this.dgBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBodega.Location = new System.Drawing.Point(28, 241);
             this.dgBodega.Name = "dgBodega";
-            this.dgBodega.Size = new System.Drawing.Size(240, 150);
+            this.dgBodega.Size = new System.Drawing.Size(522, 150);
             this.dgBodega.TabIndex = 6;
             // 
             // lblNombreBodega
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(300, 446);
+            this.ClientSize = new System.Drawing.Size(618, 446);
             this.Controls.Add(this.lblNombreBodega);
             this.Controls.Add(this.dgBodega);
             this.Controls.Add(this.btnSeleccionar);

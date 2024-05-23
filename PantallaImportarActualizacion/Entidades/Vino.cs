@@ -6,15 +6,15 @@ namespace PantallaImportarActualizacion.Entidades
     public class Vino
     {
         private string añada;
-        private string fechaActualizacion;
         private string imagenEtiqueta;
         private string nombre;
         private int notaDeCataBodega;
         private float precioARS;
         private Bodega bodega;
         private List<Maridaje> maridaje;
+        private string fechaActualizacion;
 
-        public Vino (string añadaVino, string imagenEtiquetaVino, string nombreVino, int notaDeCataBodegaVino, float precioARSVino, Bodega bodegaVino, List<Maridaje>  maridajeVino)
+        public Vino (string añadaVino, string imagenEtiquetaVino, string nombreVino, int notaDeCataBodegaVino, float precioARSVino, Bodega bodegaVino, List<Maridaje>  maridajeVino, string fechaActualizacionVino)
         {
             añada = añadaVino;
             imagenEtiqueta = imagenEtiquetaVino;
@@ -23,6 +23,7 @@ namespace PantallaImportarActualizacion.Entidades
             precioARS = precioARSVino;
             bodega = bodegaVino;
             maridaje = maridajeVino;
+            fechaActualizacion = fechaActualizacionVino;
         }
 
         public string añadaVino

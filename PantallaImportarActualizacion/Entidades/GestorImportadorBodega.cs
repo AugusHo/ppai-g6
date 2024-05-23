@@ -19,6 +19,7 @@ namespace PantallaImportarActualizacion.Entidades
         public GestorImportadorBodega(pantallaActualizarBodega pantalla)
         {
             bodegas = Datos.BodegaFactory.DatosBodegas();
+            vinos = Datos.VinoFactoy.DatosVinos();
             bodegasConActualizacion = new List<Bodega>();
             vinosConActualizacion = new List<Vino>();
             listaVinosActualizadosBodega = new List<Vino>();
@@ -40,6 +41,7 @@ namespace PantallaImportarActualizacion.Entidades
 
             obtenerActualizaciones();
             buscarVinosAActualizar();
+            actualizarOCrearVinos(bodegaSeleccionada, listaVinosActualizadosBodega);
             pantalla.mostarResumen(listaVinosActualizadosBodega, bodegaSeleccionada.nombreBodega);
         }
 

@@ -10,16 +10,18 @@ namespace PantallaImportarActualizacion.Entidades
         private string nombre;
         private bool periodoActualizacion;
         private int coordenadasUbicacion;
-        public Vino Vino { get; set; }
+        private string fechaUltimaActualizacion;
+        public Vino vino { get; set; }
+        
 
-        public Bodega(string descripcionBodega, string historiaBodega, string nombreBodega, bool periodoActualizacionBodega, int coordenadasUbicacionBodega)
+        public Bodega(string descripcionBodega, string historiaBodega, string nombreBodega, bool periodoActualizacionBodega, int coordenadasUbicacionBodega, string fechaUltimaActualizacionBodega)
         {
             descripcion = descripcionBodega;
             historia = historiaBodega;
             nombre = nombreBodega;
             periodoActualizacion = periodoActualizacionBodega;
             coordenadasUbicacion = coordenadasUbicacionBodega;
-
+            fechaUltimaActualizacion = fechaUltimaActualizacionBodega;
         }
 
         public string descripcionBodega
@@ -70,16 +72,16 @@ namespace PantallaImportarActualizacion.Entidades
             return false;
         }
 
-        public void actualizarDatosDeVino(Vino listaVinosActualizadosBodega, Bodega bodegaSeleccionada, List<Vino> allVinos, DateTime fechaActual)
+        public void actualizarDatosDeVino(Vino vinoAActualizar, Bodega bodegaSeleccionada, List<Vino> allVinos, DateTime fechaActual)
         {
             for (int i = 0; i < allVinos.Count; i++)
             {
-                bool vinoActual = Vino.sosParaActualizar(allVinos[i].nombreVino, listaVinosActualizadosBodega.nombreVino);
+                bool vinoActual = allVinos[i].sosParaActualizar(allVinos[i].nombreVino, vinoAActualizar.nombreVino);
                 if (vinoActual == true)
                 {
-                    allVinos[i].setPrecio(listaVinosActualizadosBodega.precioARSVino);
+                    allVinos[i].setPrecio(vinoAActualizar.precioARSVino);
                     //allVinos[i].setNotaCata(listaVinosActualizadosBodega.notaDeCataBodegaVino);
-                    allVinos[i].setImagenEtiqueta(listaVinosActualizadosBodega.imagenEtiquetaVino);
+                    allVinos[i].setImagenEtiqueta(vinoAActualizar.imagenEtiquetaVino);
                     allVinos[i].setFechaActualizacion(fechaActual);
                 }
             }
