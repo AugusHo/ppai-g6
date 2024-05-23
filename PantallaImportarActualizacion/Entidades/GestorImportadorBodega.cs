@@ -6,6 +6,7 @@ namespace PantallaImportarActualizacion.Entidades
 {
     class GestorImportadorBodega
     {
+        private pantallaActualizarBodega pantalla;
         private List<Bodega> bodegas;
         private List<Bodega> bodegasConActualizacion;
         private Bodega bodegaSeleccionada;
@@ -13,14 +14,15 @@ namespace PantallaImportarActualizacion.Entidades
         private List<TipoUva> tiposUva;
         private List<Vino> vinosConActualizacion;
         private List<Vino> listaVinosActualizadosBodega;
+        private bool validar;
 
-        public GestorImportadorBodega()
+        public GestorImportadorBodega(pantallaActualizarBodega pantalla)
         {
             bodegas = Datos.BodegaFactory.DatosBodegas();
             bodegasConActualizacion = new List<Bodega>();
             vinosConActualizacion = new List<Vino>();
             listaVinosActualizadosBodega = new List<Vino>();
-
+            this.pantalla = pantalla;
         }
 
         //tomar Hora Actual
@@ -35,6 +37,10 @@ namespace PantallaImportarActualizacion.Entidades
         public void tomarSeleccionBodega(string seleccionBodega)
         {
             bodegaSeleccionada = bodegasConActualizacion.FirstOrDefault(x=> x.nombreBodega == seleccionBodega);
+
+            obtenerActualizaciones();
+            buscarVinosAActualizar();
+            pantalla.mostarResumen(listaVinosActualizadosBodega, bodegaSeleccionada.nombreBodega);
         }
 
         //poner debajo de tomarSeleccionBodega()
@@ -43,13 +49,18 @@ namespace PantallaImportarActualizacion.Entidades
             vinosConActualizacion = Datos.InterfazAPIBodega.ObtenerActualizaciones();
         }
 
-        public void buscarVinosAActualizar(List<Vino> vinosConActualizacion)
+        public void buscarVinosAActualizar()
         {
             for (int i = 0; i < vinosConActualizacion.Count; i++)
             {
-                bodegaSeleccionada.esTuVino(vinosConActualizacion[i].bodegaVino.nombreBodega, bodegaSeleccionada.nombreBodega);
-                listaVinosActualizadosBodega.Add(vinosConActualizacion[i]);
+                validar = bodegaSeleccionada.esTuVino(vinosConActualizacion[i].bodegaVino.nombreBodega, bodegaSeleccionada.nombreBodega);
+                if (validar)
+                {
+                    listaVinosActualizadosBodega.Add(vinosConActualizacion[i]);
+                }
+                
             }
+            
         
         }
         public DateTime getFechaActual()
@@ -67,6 +78,8 @@ namespace PantallaImportarActualizacion.Entidades
                 bodegaSeleccionada.actualizarDatosDeVino(listaVinosActualizadosBodega[i], bodegaSeleccionada, vinos, getFechaActual());
             }
         }
+
+        
 
     }
 }

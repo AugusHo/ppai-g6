@@ -33,6 +33,7 @@
             this.cmbBodegas = new System.Windows.Forms.ComboBox();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.dgBodega = new System.Windows.Forms.DataGridView();
+            this.lblNombreBodega = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgBodega)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,17 +82,27 @@
             this.dgBodega.Size = new System.Drawing.Size(240, 150);
             this.dgBodega.TabIndex = 6;
             // 
-            // opcionObtenerActualizacion
+            // lblNombreBodega
+            // 
+            this.lblNombreBodega.AutoSize = true;
+            this.lblNombreBodega.Location = new System.Drawing.Point(69, 222);
+            this.lblNombreBodega.Name = "lblNombreBodega";
+            this.lblNombreBodega.Size = new System.Drawing.Size(35, 13);
+            this.lblNombreBodega.TabIndex = 7;
+            this.lblNombreBodega.Text = "label2";
+            // 
+            // pantallaActualizarBodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(300, 446);
+            this.Controls.Add(this.lblNombreBodega);
             this.Controls.Add(this.dgBodega);
             this.Controls.Add(this.btnSeleccionar);
             this.Controls.Add(this.cmbBodegas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.opcionImportarActualizacionVino);
-            this.Name = "opcionObtenerActualizacion";
+            this.Name = "pantallaActualizarBodega";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administracion Vinos";
             ((System.ComponentModel.ISupportInitialize)(this.dgBodega)).EndInit();
@@ -107,6 +118,7 @@
         private System.Windows.Forms.ComboBox cmbBodegas;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridView dgBodega;
+        private System.Windows.Forms.Label lblNombreBodega;
     }
 }
 
