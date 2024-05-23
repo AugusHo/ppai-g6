@@ -45,7 +45,7 @@ namespace PantallaImportarActualizacion
             dgBodega.DataSource = null;
             dgBodega.DataSource = vinos;
             lblNombreBodega.Enabled = true;
-            lblNombreBodega.Text = nombreBodega;
+            lblNombreBodega.Text = ("Nombre de la bodega: " + nombreBodega);
         }
     }
 }

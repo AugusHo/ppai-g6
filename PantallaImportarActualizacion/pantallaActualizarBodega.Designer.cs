@@ -85,9 +85,10 @@
             // lblNombreBodega
             // 
             this.lblNombreBodega.AutoSize = true;
-            this.lblNombreBodega.Location = new System.Drawing.Point(69, 222);
+            this.lblNombreBodega.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombreBodega.Location = new System.Drawing.Point(33, 225);
             this.lblNombreBodega.Name = "lblNombreBodega";
-            this.lblNombreBodega.Size = new System.Drawing.Size(35, 13);
+            this.lblNombreBodega.Size = new System.Drawing.Size(41, 13);
             this.lblNombreBodega.TabIndex = 7;
             this.lblNombreBodega.Text = "label2";
             // 
