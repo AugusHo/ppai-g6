@@ -39,7 +39,7 @@
             // 
             // opcionImportarActualizacionVino
             // 
-            this.opcionImportarActualizacionVino.Location = new System.Drawing.Point(36, 28);
+            this.opcionImportarActualizacionVino.Location = new System.Drawing.Point(528, 83);
             this.opcionImportarActualizacionVino.Name = "opcionImportarActualizacionVino";
             this.opcionImportarActualizacionVino.Size = new System.Drawing.Size(232, 43);
             this.opcionImportarActualizacionVino.TabIndex = 0;
@@ -50,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 120);
+            this.label1.Location = new System.Drawing.Point(554, 142);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 13);
             this.label1.TabIndex = 2;
@@ -59,14 +59,14 @@
             // cmbBodegas
             // 
             this.cmbBodegas.FormattingEnabled = true;
-            this.cmbBodegas.Location = new System.Drawing.Point(78, 148);
+            this.cmbBodegas.Location = new System.Drawing.Point(566, 158);
             this.cmbBodegas.Name = "cmbBodegas";
             this.cmbBodegas.Size = new System.Drawing.Size(121, 21);
             this.cmbBodegas.TabIndex = 4;
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(99, 175);
+            this.btnSeleccionar.Location = new System.Drawing.Point(587, 197);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(75, 23);
             this.btnSeleccionar.TabIndex = 5;
@@ -77,9 +77,9 @@
             // dgBodega
             // 
             this.dgBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgBodega.Location = new System.Drawing.Point(28, 241);
+            this.dgBodega.Location = new System.Drawing.Point(22, 241);
             this.dgBodega.Name = "dgBodega";
-            this.dgBodega.Size = new System.Drawing.Size(522, 150);
+            this.dgBodega.Size = new System.Drawing.Size(1200, 242);
             this.dgBodega.TabIndex = 6;
             // 
             // lblNombreBodega
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 446);
+            this.ClientSize = new System.Drawing.Size(1247, 552);
             this.Controls.Add(this.lblNombreBodega);
             this.Controls.Add(this.dgBodega);
             this.Controls.Add(this.btnSeleccionar);

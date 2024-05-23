@@ -68,6 +68,11 @@ namespace PantallaImportarActualizacion.Entidades
             set => maridaje = value;
         }
 
+        public string fechaActualizacionV {
+            get => fechaActualizacion;
+            set => fechaActualizacion = value;
+        }
+
         public bool sosParaActualizar( string nombreAllVino, string nombreVinoAct )
         {
             if (nombreAllVino == nombreVinoAct) 
@@ -82,11 +87,10 @@ namespace PantallaImportarActualizacion.Entidades
             this.precioARS = precio;
         }
 
-        /*public void setNotaCata(int notaDeCataBodega)
+        public void setNotaCata(int notaDeCataBodega)
         {
-            for (int i = 0; i < .nota;
-            this.setNotaCata = notaDeCataBodega;
-        }*/
+            this.notaDeCataBodegaVino = notaDeCataBodega;
+        }
 
         public void setImagenEtiqueta(string imagenEtiqueta)
         {

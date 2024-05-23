@@ -52,6 +52,7 @@
     <Compile Include="Datos\NuevosVinos.cs" />
     <Compile Include="Datos\VinoFactoy.cs" />
     <Compile Include="Datos\InterfazAPIBodega.cs" />
+    <Compile Include="Datos\VinoTabla.cs" />
     <Compile Include="Entidades\Bodega.cs" />
     <Compile Include="Entidades\Enofilo.cs" />
     <Compile Include="Entidades\GestorImportadorBodega.cs" />

@@ -80,9 +80,10 @@ namespace PantallaImportarActualizacion.Entidades
                 if (vinoActual == true)
                 {
                     allVinos[i].setPrecio(vinoAActualizar.precioARSVino);
-                    //allVinos[i].setNotaCata(listaVinosActualizadosBodega.notaDeCataBodegaVino);
+                    allVinos[i].setNotaCata(vinoAActualizar.notaDeCataBodegaVino);
                     allVinos[i].setImagenEtiqueta(vinoAActualizar.imagenEtiquetaVino);
                     allVinos[i].setFechaActualizacion(fechaActual);
+                    
                 }
             }
 

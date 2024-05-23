@@ -1,6 +1,8 @@
-﻿using PantallaImportarActualizacion.Entidades;
+﻿using PantallaImportarActualizacion.Datos;
+using PantallaImportarActualizacion.Entidades;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace PantallaImportarActualizacion
@@ -42,10 +44,28 @@ namespace PantallaImportarActualizacion
 
         public void mostarResumen(List<Vino> vinos, string nombreBodega)
         {
+            List<VinoTabla> vinosTabla = this.Transformar(vinos);
             dgBodega.DataSource = null;
-            dgBodega.DataSource = vinos;
+            dgBodega.DataSource = vinosTabla;
+            Console.WriteLine(vinos);
             lblNombreBodega.Enabled = true;
             lblNombreBodega.Text = ("Nombre de la bodega: " + nombreBodega);
         }
+
+        public List<VinoTabla> Transformar(List<Vino> vinos)
+        {
+            return vinos.Select(v => new VinoTabla
+            {
+                Añada = v.añadaVino,
+                ImagenEtiqueta = v.imagenEtiquetaVino,
+                Nombre = v.nombreVino,
+                NotaDeCataBodega = v.notaDeCataBodegaVino,
+                PrecioARS = v.precioARSVino,
+                NombreBodega = v.bodegaVino.nombreBodega,
+                DatosMaridaje = string.Join(", ", v.maridajeVino.Select(m => $"{m.nombreMaridaje}: {m.descripcionMaridaje}")),
+                FechaActualizacion = v.fechaActualizacionV,
+            }).ToList();
+        }
+
     }
 }
