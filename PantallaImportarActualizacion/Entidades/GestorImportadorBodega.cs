@@ -51,6 +51,7 @@ namespace PantallaImportarActualizacion.Entidades
 
         public void buscarVinosAActualizar()
         {
+            listaVinosActualizadosBodega.Clear();
             for (int i = 0; i < vinosConActualizacion.Count; i++)
             {
                 validar = bodegaSeleccionada.esTuVino(vinosConActualizacion[i].bodegaVino.nombreBodega, bodegaSeleccionada.nombreBodega);
@@ -58,7 +59,6 @@ namespace PantallaImportarActualizacion.Entidades
                 {
                     listaVinosActualizadosBodega.Add(vinosConActualizacion[i]);
                 }
-                
             }
             
         
