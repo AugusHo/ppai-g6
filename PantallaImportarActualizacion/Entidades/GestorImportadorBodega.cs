@@ -60,8 +60,6 @@ namespace PantallaImportarActualizacion.Entidades
                     listaVinosActualizadosBodega.Add(vinosConActualizacion[i]);
                 }
             }
-            
-        
         }
         public DateTime getFechaActual()
         {
@@ -78,8 +76,5 @@ namespace PantallaImportarActualizacion.Entidades
                 bodegaSeleccionada.actualizarDatosDeVino(listaVinosActualizadosBodega[i], bodegaSeleccionada, vinos, getFechaActual());
             }
         }
-
-        
-
     }
 }
