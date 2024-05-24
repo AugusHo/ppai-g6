@@ -39,11 +39,11 @@ namespace PantallaImportarActualizacion.Entidades
 
         public void tomarSeleccionBodega(string seleccionBodega)
         {
-            bodegaSeleccionada = bodegasConActualizacion.FirstOrDefault(x=> x.nombreBodega == seleccionBodega);
+            bodegaSeleccionada = bodegasConActualizacion.FirstOrDefault(x => x.nombreBodega == seleccionBodega);
 
             obtenerActualizaciones();
             buscarVinosAActualizar();
-            actualizarOCrearVinos(bodegaSeleccionada, listaVinosAActualizar);
+            actualizarOCrearVinos(listaVinosAActualizar);
             pantalla.mostarResumen(listaFinalVinos, bodegaSeleccionada.nombreBodega);
         }
 
@@ -72,16 +72,31 @@ namespace PantallaImportarActualizacion.Entidades
 
         }
 
-        public void actualizarOCrearVinos(Bodega bodegaSeleccionada, List<Vino> listaVinosAActualizar)
+        public void actualizarOCrearVinos(List<Vino> listaVinosAActualizar)
         {
             //Parte de Actualizar
-            for (int i = 0; i < listaVinosAActualizar.Count; i++)
-            {
-                bodegaSeleccionada.actualizarDatosDeVino(listaVinosAActualizar[i], bodegaSeleccionada, vinos, getFechaActual());
-                listaFinalVinos.Add(listaVinosAActualizar[i]);
-                Console.WriteLine(listaVinosAActualizar[i]);
-            }
+            actualizarVino(listaVinosAActualizar);
             //Parte de Crear
+            
         }
+
+        public void actualizarVino(List<Vino> listaVinos)
+        {
+            for (int i = 0; i < listaVinos.Count; i++)
+                {
+                    bodegaSeleccionada.actualizarDatosDeVino(listaVinosAActualizar[i], vinos, getFechaActual());
+                    listaFinalVinos.Add(listaVinos[i]);
+                    Console.WriteLine(listaVinos[i]);
+                }
+        }
+
+        public void crearVino(List<Vino> listaVinos)
+        {
+            for (int i = 0; i < listaVinos.Count; i++)
+            {
+                
+            }
+        }
+
     }
 }

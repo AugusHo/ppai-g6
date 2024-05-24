@@ -72,7 +72,7 @@ namespace PantallaImportarActualizacion.Entidades
             return false;
         }
 
-        public void actualizarDatosDeVino(Vino vinoAActualizar, Bodega bodegaSeleccionada, List<Vino> allVinos, DateTime fechaActual)
+        public void actualizarDatosDeVino(Vino vinoAActualizar, List<Vino> allVinos, DateTime fechaActual)
         {
             for (int i = 0; i < allVinos.Count; i++)
             {

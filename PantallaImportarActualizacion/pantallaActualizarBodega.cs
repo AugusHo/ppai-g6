@@ -47,7 +47,6 @@ namespace PantallaImportarActualizacion
             List<VinoTabla> vinosTabla = this.Transformar(vinos);
             dgBodega.DataSource = null;
             dgBodega.DataSource = vinosTabla;
-            Console.WriteLine(vinos);
             lblNombreBodega.Enabled = true;
             lblNombreBodega.Text = ("Nombre de la bodega: " + nombreBodega);
         }
