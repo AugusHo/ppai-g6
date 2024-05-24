@@ -73,9 +73,9 @@ namespace PantallaImportarActualizacion.Entidades
             set => fechaActualizacion = value;
         }
 
-        public bool sosParaActualizar( string nombreAllVino, string nombreVinoAct )
+        public bool sosParaActualizar( string nombreAllVino, string nombreVinoAct)
         {
-            if (nombreAllVino == nombreVinoAct) 
+            if (nombreAllVino == nombreVinoAct)
             {
                 return true;
             }

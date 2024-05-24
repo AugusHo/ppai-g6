@@ -72,21 +72,23 @@ namespace PantallaImportarActualizacion.Entidades
             return false;
         }
 
-        public void actualizarDatosDeVino(Vino vinoAActualizar, List<Vino> allVinos, DateTime fechaActual)
+        public void actualizarDatosDeVino(Vino vinoAActualizar, List<Vino> allVinos, DateTime fechaActual, List<Vino> listaFinal)
         {
             for (int i = 0; i < allVinos.Count; i++)
             {
                 bool vinoActual = allVinos[i].sosParaActualizar(allVinos[i].nombreVino, vinoAActualizar.nombreVino);
-                if (vinoActual == true)
+                if (allVinos[i].bodegaVino.nombre == vinoAActualizar.bodegaVino.nombre)
                 {
-                    allVinos[i].setPrecio(vinoAActualizar.precioARSVino);
-                    allVinos[i].setNotaCata(vinoAActualizar.notaDeCataBodegaVino);
-                    allVinos[i].setImagenEtiqueta(vinoAActualizar.imagenEtiquetaVino);
-                    allVinos[i].setFechaActualizacion(fechaActual);
-                    
+                    if (vinoActual == true)
+                    {
+                        allVinos[i].setPrecio(vinoAActualizar.precioARSVino);
+                        allVinos[i].setNotaCata(vinoAActualizar.notaDeCataBodegaVino);
+                        allVinos[i].setImagenEtiqueta(vinoAActualizar.imagenEtiquetaVino);
+                        allVinos[i].setFechaActualizacion(fechaActual);
+                        listaFinal.Add(allVinos[i]);
+                    }
                 }
             }
-
         }
     }
 }

@@ -15,6 +15,7 @@ namespace PantallaImportarActualizacion.Entidades
         private List<Vino> vinosConActualizacion;
         private List<Vino> listaVinosAActualizar;
         private List<Vino> listaFinalVinos;
+        private List<Vino> listaNuevosVinos;
         private bool validar;
 
         public GestorImportadorBodega(pantallaActualizarBodega pantalla)
@@ -28,6 +29,8 @@ namespace PantallaImportarActualizacion.Entidades
             listaVinosAActualizar = new List<Vino>();
             //Lista de solo los vinos actualizados
             listaFinalVinos = new List<Vino>();
+            //Lista de vinos nuevos
+            listaNuevosVinos = new List<Vino>();
             this.pantalla = pantalla;
         }
 
@@ -58,16 +61,17 @@ namespace PantallaImportarActualizacion.Entidades
             listaVinosAActualizar.Clear();
             for (int i = 0; i < vinosConActualizacion.Count; i++)
             {
-                validar = bodegaSeleccionada.esTuVino(vinosConActualizacion[i].bodegaVino.nombreBodega, bodegaSeleccionada.nombreBodega);
+                bool validar = bodegaSeleccionada.esTuVino(vinosConActualizacion[i].bodegaVino.nombreBodega, bodegaSeleccionada.nombreBodega);
                 if (validar)
                 {
                     listaVinosAActualizar.Add(vinosConActualizacion[i]);
                 }
+                
             }
         }
         public DateTime getFechaActual()
         {
-            DateTime fechaActual = DateTime.Now.Date;
+            DateTime fechaActual = DateTime.Now;
             return fechaActual;
 
         }
@@ -82,20 +86,22 @@ namespace PantallaImportarActualizacion.Entidades
 
         public void actualizarVino(List<Vino> listaVinos)
         {
+            Console.WriteLine(listaVinos);
+            listaFinalVinos.Clear();
             for (int i = 0; i < listaVinos.Count; i++)
                 {
-                    bodegaSeleccionada.actualizarDatosDeVino(listaVinosAActualizar[i], vinos, getFechaActual());
-                    listaFinalVinos.Add(listaVinos[i]);
-                    Console.WriteLine(listaVinos[i]);
+                    bodegaSeleccionada.actualizarDatosDeVino(listaVinos[i], vinos, getFechaActual(), listaFinalVinos);
+                    //listaFinalVinos.Add(listaVinos[i]);
                 }
+            Console.WriteLine(listaFinalVinos);
         }
 
         public void crearVino(List<Vino> listaVinos)
         {
-            for (int i = 0; i < listaVinos.Count; i++)
+            /*for (int i = 0; i < listaVinos.Count; i++)
             {
                 
-            }
+            }*/
         }
 
     }
