@@ -50,6 +50,7 @@
     <Compile Include="Datos\BodegaFactory.cs" />
     <Compile Include="Datos\MaridajeFactory.cs" />
     <Compile Include="Datos\NuevosVinos.cs" />
+    <Compile Include="Datos\TipoUvaFactory.cs" />
     <Compile Include="Datos\VinoFactoy.cs" />
     <Compile Include="Datos\InterfazAPIBodega.cs" />
     <Compile Include="Datos\VinoTabla.cs" />

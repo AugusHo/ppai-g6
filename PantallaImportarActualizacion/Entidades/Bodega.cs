@@ -72,7 +72,7 @@ namespace PantallaImportarActualizacion.Entidades
             return false;
         }
 
-        public void actualizarDatosDeVino(Vino vinoAActualizar, List<Vino> allVinos, DateTime fechaActual, List<Vino> listaFinal)
+        public void actualizarDatosDeVino(Vino vinoAActualizar, List<Vino> allVinos, DateTime fechaActual, List<Vino> listaFinalAct, List<Vino> listaCreados)
         {
             for (int i = 0; i < allVinos.Count; i++)
             {
@@ -85,7 +85,11 @@ namespace PantallaImportarActualizacion.Entidades
                         allVinos[i].setNotaCata(vinoAActualizar.notaDeCataBodegaVino);
                         allVinos[i].setImagenEtiqueta(vinoAActualizar.imagenEtiquetaVino);
                         allVinos[i].setFechaActualizacion(fechaActual);
-                        listaFinal.Add(allVinos[i]);
+                        listaFinalAct.Add(allVinos[i]);
+                    }
+                    else
+                    {
+                        listaCreados.Add(allVinos[i]);
                     }
                 }
             }

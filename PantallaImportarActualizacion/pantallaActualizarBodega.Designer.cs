@@ -79,7 +79,7 @@
             this.dgBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBodega.Location = new System.Drawing.Point(22, 241);
             this.dgBodega.Name = "dgBodega";
-            this.dgBodega.Size = new System.Drawing.Size(1200, 242);
+            this.dgBodega.Size = new System.Drawing.Size(1200, 94);
             this.dgBodega.TabIndex = 6;
             // 
             // lblNombreBodega

@@ -22,5 +22,11 @@
             get => nombre;
             set => nombre = value;
         }
+
+        public bool sosMaridaje( string nombre, string nombreM)
+        {
+            if ( nombre == nombreM) { return true; }
+            return false;
+        }
     }
 }

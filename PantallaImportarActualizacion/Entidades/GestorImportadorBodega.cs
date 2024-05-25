@@ -11,6 +11,7 @@ namespace PantallaImportarActualizacion.Entidades
         private List<Bodega> bodegasConActualizacion;
         private Bodega bodegaSeleccionada;
         private List<Vino> vinos;
+        private List<Maridaje> maridajes;
         private List<TipoUva> tiposUva;
         private List<Vino> vinosConActualizacion;
         private List<Vino> listaVinosAActualizar;
@@ -21,7 +22,10 @@ namespace PantallaImportarActualizacion.Entidades
         public GestorImportadorBodega(pantallaActualizarBodega pantalla)
         {
             bodegas = Datos.BodegaFactory.DatosBodegas();
+            //Llama a todos los vinos de la "base de datos"
             vinos = Datos.VinoFactoy.DatosVinos();
+            //LLama a todos los maridajes de la "base de datos"
+            maridajes = Datos.MaridajeFactory.DatosMaridajes();
             bodegasConActualizacion = new List<Bodega>();
             //Lista de todos vinos que nos vienen de la API
             vinosConActualizacion = new List<Vino>();
@@ -31,6 +35,7 @@ namespace PantallaImportarActualizacion.Entidades
             listaFinalVinos = new List<Vino>();
             //Lista de vinos nuevos
             listaNuevosVinos = new List<Vino>();
+           
             this.pantalla = pantalla;
         }
 
@@ -81,7 +86,7 @@ namespace PantallaImportarActualizacion.Entidades
             //Parte de Actualizar
             actualizarVino(listaVinosAActualizar);
             //Parte de Crear
-            
+            crearVino(listaNuevosVinos);
         }
 
         public void actualizarVino(List<Vino> listaVinos)
@@ -90,18 +95,31 @@ namespace PantallaImportarActualizacion.Entidades
             listaFinalVinos.Clear();
             for (int i = 0; i < listaVinos.Count; i++)
                 {
-                    bodegaSeleccionada.actualizarDatosDeVino(listaVinos[i], vinos, getFechaActual(), listaFinalVinos);
-                    //listaFinalVinos.Add(listaVinos[i]);
+                    bodegaSeleccionada.actualizarDatosDeVino(listaVinos[i], vinos, getFechaActual(), listaFinalVinos, listaNuevosVinos);
                 }
-            Console.WriteLine(listaFinalVinos);
         }
 
-        public void crearVino(List<Vino> listaVinos)
+        public void crearVino(List<Vino> creados)
         {
-            /*for (int i = 0; i < listaVinos.Count; i++)
+            //por cada uno de los contados
+            for (int i = 0; i < creados.Count; i++)
             {
-                
-            }*/
+                //por cada varidaje del vino
+               for (int j = 0; j < creados[i].maridajeVino.Count; j++)
+                {
+                    buscarMaridaje(creados[i].maridajeVino[j].nombreMaridaje);
+                }
+
+               buscar
+
+            }
+        }
+
+        public void buscarMaridaje(string nombreMaridaje) {
+            for (int i = 0; i < maridajes.Count; i++)
+            {
+                maridajes[i].sosMaridaje(nombreMaridaje, maridajes[i].nombreMaridaje);
+            }
         }
 
     }
