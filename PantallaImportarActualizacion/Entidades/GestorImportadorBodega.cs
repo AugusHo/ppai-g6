@@ -170,7 +170,7 @@ namespace PantallaImportarActualizacion.Entidades
 
         public void crearNuevoVino(Vino creado, List<Maridaje> listaNuevoVinoMaridaje, List<TipoUva> listaNuevoVinoTU)
         {
-            Vino nuevoVino = new Vino(creado.añadaVino, creado.imagenEtiquetaVino, creado.nombreVino, creado.notaDeCataBodegaVino, creado.precioARSVino, creado.bodegaVino, listaNuevoVinoMaridaje, creado.fechaActualizacionV, creado.varietalVino);
+            Vino nuevoVino = new Vino(creado.añadaVino, creado.imagenEtiquetaVino, creado.nombreVino, creado.notaDeCataBodegaVino, creado.precioARSVino, creado.bodegaVino, listaNuevoVinoMaridaje, getFechaActual(), creado.varietalVino);
             //vinos.Add(nuevoVino);
             listaFinalVinos.Add(nuevoVino);
 
