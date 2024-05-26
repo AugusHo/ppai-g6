@@ -61,7 +61,7 @@ namespace PantallaImportarActualizacion
                 NotaDeCataBodega = v.notaDeCataBodegaVino,
                 PrecioARS = v.precioARSVino,
                 NombreBodega = v.bodegaVino.nombreBodega,
-                DatosMaridaje = string.Join(" // ", v.maridajeVino.Select(m => $"{m.descripcionMaridaje}: {m.nombreMaridaje}")),
+                DatosMaridaje = string.Join(" // ", v.maridajeVino.Select(m => $"{m.nombreMaridaje}: {m.descripcionMaridaje}")),
                 FechaActualizacion = v.fechaActualizacionV,
                 DatosVarietal = string.Join(" // ", v.varietalVino.Select(varietal => $"{varietal.porcentajeTiposUvaVarietal}% de {varietal.tipoUvaVarietal.nombreUva}: {varietal.descripcionVarietal}"))
             }).ToList();

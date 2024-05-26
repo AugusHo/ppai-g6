@@ -6,7 +6,7 @@
         private string descripcion;
         
 
-        public Maridaje(string descripcionMaridaje, string nombreMaridaje)
+        public Maridaje( string nombreMaridaje, string descripcionMaridaje)
         {
             descripcion = descripcionMaridaje;
             nombre = nombreMaridaje;
@@ -26,7 +26,8 @@
 
         public bool sosMaridaje( string nombre, string nombreM)
         {
-            if ( nombre == nombreM) { return true; }
+            if ( nombre == nombreM)
+            {return true; }
             return false;
         }
     }

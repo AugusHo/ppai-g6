@@ -16,7 +16,7 @@ namespace PantallaImportarActualizacion.Datos
             List<Entidades.Varietal> varietales = VarietalFactory.DatosVarietal();
 
             
-            vinos.Add(new Entidades.Vino("2018", "imagen1.jpg", "Vino Tinto Reserva", 1, 1500.5f, bodegas[0], new List<Entidades.Maridaje> { maridajes[0], maridajes[1] }, "2023, 5, 23", new List<Entidades.Varietal> {varietales[0], varietales[1]}));
+            vinos.Add(new Entidades.Vino("2018", "imagen1.jpg", "Vino Tinto Reserva", 1, 1500.5f, bodegas[0], new List<Entidades.Maridaje> { }, "2023, 5, 23", new List<Entidades.Varietal> {varietales[0], varietales[1]}));
             vinos.Add(new Entidades.Vino("2019", "imagen2.jpg", "Vino Blanco Chardonnay", 5, 1200.0f, bodegas[1], new List<Entidades.Maridaje> { maridajes[2], maridajes[3] }, "2023, 5, 23", new List<Entidades.Varietal> { varietales[2], varietales[3] }));
             vinos.Add(new Entidades.Vino("2017", "imagen3.jpg", "Vino Rosado", 3, 1350.75f, bodegas[2], new List<Entidades.Maridaje> { maridajes[4], maridajes[5] }, "2023, 5, 23", new List<Entidades.Varietal> { varietales[4], varietales[5] }));
             vinos.Add(new Entidades.Vino("2020", "imagen4.jpg", "Vino Espumante", 2, 1600.0f, bodegas[3], new List<Entidades.Maridaje> { maridajes[6], maridajes[7] }, "2023, 5, 23", new List<Entidades.Varietal> { varietales[0], varietales[1] }));

@@ -76,20 +76,27 @@ namespace PantallaImportarActualizacion.Entidades
         {
             for (int i = 0; i < allVinos.Count; i++)
             {
+                // Verifica que el vino de la api exista ya en la base de datos
                 bool vinoActual = allVinos[i].sosParaActualizar(allVinos[i].nombreVino, vinoAActualizar.nombreVino);
+                Console.WriteLine(allVinos[i]);
+
                 if (allVinos[i].bodegaVino.nombre == vinoAActualizar.bodegaVino.nombre)
                 {
-                    if (vinoActual == true)
+                    if (vinoActual)
                     {
                         allVinos[i].setPrecio(vinoAActualizar.precioARSVino);
                         allVinos[i].setNotaCata(vinoAActualizar.notaDeCataBodegaVino);
                         allVinos[i].setImagenEtiqueta(vinoAActualizar.imagenEtiquetaVino);
                         allVinos[i].setFechaActualizacion(fechaActual);
                         listaFinalAct.Add(allVinos[i]);
+                        Console.WriteLine(listaFinalAct);
+                        break;
                     }
                     else
                     {
-                        listaCreados.Add(allVinos[i]);
+                        listaCreados.Add(vinoAActualizar);
+                        Console.WriteLine(listaCreados);
+                        //break;
                     }
                 }
             }

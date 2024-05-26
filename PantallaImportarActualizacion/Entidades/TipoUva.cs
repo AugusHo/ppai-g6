@@ -22,5 +22,12 @@
             get => descripcion;
             set => descripcion = value;
         }
+
+        public bool sosTipoUva(string nombre, string nombreTU)
+        {
+            if (nombre == nombreTU) { return true; }
+            return false;
+        }
+
     }
 }

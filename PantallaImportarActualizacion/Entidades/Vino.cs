@@ -81,13 +81,14 @@ namespace PantallaImportarActualizacion.Entidades
             set => varietal = value;
         }
 
-        public bool sosParaActualizar( string nombreAllVino, string nombreVinoAct)
+        public bool sosParaActualizar(string nombreAllVino, string nombreVinoAct)
         {
-            if (nombreAllVino == nombreVinoAct)
+            if (string.IsNullOrWhiteSpace(nombreAllVino) || string.IsNullOrWhiteSpace(nombreVinoAct))
             {
-                return true;
+                return false;
             }
-            return false;
+
+            return nombreAllVino.Trim().Equals(nombreVinoAct.Trim(), StringComparison.OrdinalIgnoreCase);
         }
 
         public void setPrecio(float precio)
