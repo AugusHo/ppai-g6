@@ -17,6 +17,7 @@ namespace PantallaImportarActualizacion.Datos
         public string NombreBodega { get; set; }
         public string DatosMaridaje { get; set; }
         public string FechaActualizacion { get; set; }
+        public string DatosVarietal { get; set; }
     }
 
 

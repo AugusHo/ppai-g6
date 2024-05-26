@@ -2,8 +2,9 @@
 {
     public class Maridaje
     {
-        private string descripcion;
         private string nombre;
+        private string descripcion;
+        
 
         public Maridaje(string descripcionMaridaje, string nombreMaridaje)
         {

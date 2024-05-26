@@ -17,22 +17,32 @@ namespace PantallaImportarActualizacion.Entidades
         private List<Vino> listaVinosAActualizar;
         private List<Vino> listaFinalVinos;
         private List<Vino> listaNuevosVinos;
-        private bool validar;
+        //private bool validar;
 
         public GestorImportadorBodega(pantallaActualizarBodega pantalla)
         {
             bodegas = Datos.BodegaFactory.DatosBodegas();
+
             //Llama a todos los vinos de la "base de datos"
             vinos = Datos.VinoFactoy.DatosVinos();
+
             //LLama a todos los maridajes de la "base de datos"
             maridajes = Datos.MaridajeFactory.DatosMaridajes();
+
+            //Llama a todas las tiposUva de la "base de datos"
+            tiposUva = Datos.TipoUvaFactory.DatosTipoUva();
+
             bodegasConActualizacion = new List<Bodega>();
+
             //Lista de todos vinos que nos vienen de la API
             vinosConActualizacion = new List<Vino>();
+
             //Lista de los vinos que tenemos que actualizar
             listaVinosAActualizar = new List<Vino>();
+
             //Lista de solo los vinos actualizados
             listaFinalVinos = new List<Vino>();
+
             //Lista de vinos nuevos
             listaNuevosVinos = new List<Vino>();
            
@@ -101,7 +111,7 @@ namespace PantallaImportarActualizacion.Entidades
 
         public void crearVino(List<Vino> creados)
         {
-            //por cada uno de los contados
+            //por cada uno de los vinos nuevos que no existen en la base de datos de la bodega: nuevos
             for (int i = 0; i < creados.Count; i++)
             {
                 //por cada varidaje del vino
@@ -110,7 +120,7 @@ namespace PantallaImportarActualizacion.Entidades
                     buscarMaridaje(creados[i].maridajeVino[j].nombreMaridaje);
                 }
 
-               buscar
+                buscarTipoUva(tiposUva);
 
             }
         }
@@ -120,6 +130,12 @@ namespace PantallaImportarActualizacion.Entidades
             {
                 maridajes[i].sosMaridaje(nombreMaridaje, maridajes[i].nombreMaridaje);
             }
+        }
+
+        public void buscarTipoUva(List<TipoUva> listaTiposUva)
+        {
+            
+
         }
 
     }

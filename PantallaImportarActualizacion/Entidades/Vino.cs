@@ -13,8 +13,9 @@ namespace PantallaImportarActualizacion.Entidades
         private Bodega bodega;
         private List<Maridaje> maridaje;
         private string fechaActualizacion;
+        private List<Varietal> varietal;
 
-        public Vino (string añadaVino, string imagenEtiquetaVino, string nombreVino, int notaDeCataBodegaVino, float precioARSVino, Bodega bodegaVino, List<Maridaje>  maridajeVino, string fechaActualizacionVino)
+        public Vino(string añadaVino, string imagenEtiquetaVino, string nombreVino, int notaDeCataBodegaVino, float precioARSVino, Bodega bodegaVino, List<Maridaje> maridajeVino, string fechaActualizacionVino, List<Varietal> varietalVino )
         {
             añada = añadaVino;
             imagenEtiqueta = imagenEtiquetaVino;
@@ -24,6 +25,7 @@ namespace PantallaImportarActualizacion.Entidades
             bodega = bodegaVino;
             maridaje = maridajeVino;
             fechaActualizacion = fechaActualizacionVino;
+            varietal = varietalVino;
         }
 
         public string añadaVino
@@ -71,6 +73,12 @@ namespace PantallaImportarActualizacion.Entidades
         public string fechaActualizacionV {
             get => fechaActualizacion;
             set => fechaActualizacion = value;
+        }
+
+        public List<Varietal> varietalVino
+        {
+            get => varietal;
+            set => varietal = value;
         }
 
         public bool sosParaActualizar( string nombreAllVino, string nombreVinoAct)
