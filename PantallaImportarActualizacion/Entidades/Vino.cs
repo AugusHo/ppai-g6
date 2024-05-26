@@ -106,10 +106,9 @@ namespace PantallaImportarActualizacion.Entidades
             this.imagenEtiquetaVino = imagenEtiqueta;
         }
 
-        public void setFechaActualizacion( DateTime fechaActual)
+        public void setFechaActualizacion( string fechaActual)
         {
-            string fechaActualString = fechaActual.ToString("dd-MM-yyyy");
-            this.fechaActualizacion = fechaActualString;
+            this.fechaActualizacion = fechaActual;
         }
     }
 }

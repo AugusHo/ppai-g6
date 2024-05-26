@@ -72,7 +72,7 @@ namespace PantallaImportarActualizacion.Entidades
             return false;
         }
 
-        public void actualizarDatosDeVino(Vino vinoAActualizar, List<Vino> allVinos, DateTime fechaActual, List<Vino> listaFinalAct, List<Vino> listaCreados)
+        public void actualizarDatosDeVino(Vino vinoAActualizar, List<Vino> allVinos, string fechaActual, List<Vino> listaFinalAct, List<Vino> listaCreados)
         {
             bool vinoEncontrado = false;
 

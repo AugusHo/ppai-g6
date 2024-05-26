@@ -97,10 +97,11 @@ namespace PantallaImportarActualizacion.Entidades
         }
         // -------------------------------------------------------------------------------------------------------------------------------------- 
         //hasta aca anda
-        public DateTime getFechaActual()
+        public String getFechaActual()
         {
             DateTime fechaActual = DateTime.Now;
-            return fechaActual;
+            string fechaActualString = fechaActual.ToString("dd-MM-yyyy");
+            return fechaActualString;
 
         }
 
@@ -169,7 +170,7 @@ namespace PantallaImportarActualizacion.Entidades
 
         public void crearNuevoVino(Vino creado, List<Maridaje> listaNuevoVinoMaridaje, List<TipoUva> listaNuevoVinoTU)
         {
-            Vino nuevoVino = new Vino(creado.añadaVino, creado.imagenEtiquetaVino, creado.nombreVino, creado.notaDeCataBodegaVino, creado.precioARSVino, creado.bodegaVino, listaNuevoVinoMaridaje, "puto", creado.varietalVino);
+            Vino nuevoVino = new Vino(creado.añadaVino, creado.imagenEtiquetaVino, creado.nombreVino, creado.notaDeCataBodegaVino, creado.precioARSVino, creado.bodegaVino, listaNuevoVinoMaridaje, creado.fechaActualizacionV, creado.varietalVino);
             //vinos.Add(nuevoVino);
             listaFinalVinos.Add(nuevoVino);
 
