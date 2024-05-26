@@ -22,7 +22,7 @@ namespace PantallaImportarActualizacion.Datos
             vinosConActualizacion.Add(new Entidades.Vino("2021", "imagen400.jpg", "Vino Blanco Sauvignon", 2, 3456.70f, bodegas[2], new List<Entidades.Maridaje> { maridajes[0], maridajes[1] },"no se actualizo", new List<Entidades.Varietal> { varietales[4], varietales[5] }));
             vinosConActualizacion.Add(new Entidades.Vino("2017", "imagen300.jpg", "Vino Rosado", 5, 9101.25f, bodegas[2], new List<Entidades.Maridaje> { maridajes[4], maridajes[5] }, "no se actualizo", new List<Entidades.Varietal> { varietales[4], varietales[5] }));
             //Vinos para crear
-            vinosConActualizacion.Add(new Entidades.Vino("2019", "imagen200.jpg", "Vino Blanco Chardonnay", 3, 5678.9f, bodegas[0], new List<Entidades.Maridaje> { maridajes[2], maridajes[3] }, "no se actualizo", new List<Entidades.Varietal> { varietalesNuevos[0], varietalesNuevos[1] }));
+            vinosConActualizacion.Add(new Entidades.Vino("2019", "imagen200.jpg", "Vino Blanco Vladimmir", 3, 5678.9f, bodegas[0], new List<Entidades.Maridaje> { maridajes[2], maridajes[3] }, "no se actualizo", new List<Entidades.Varietal> { varietalesNuevos[0], varietalesNuevos[1] }));
             
             //Nuevos varietales:
             //Primer Vino
@@ -35,9 +35,6 @@ namespace PantallaImportarActualizacion.Datos
             varietalesNuevos.Add(new Entidades.Varietal("Un vino tinto suave y aterciopelado.", "100%", tiposUvaNuevos[1]));
             //Cuarto Vino
             varietalesNuevos.Add(new Entidades.Varietal("Un vino espumoso elegante y seco.", "100%", tiposUvaNuevos[2]));
-
-
-
 
             return getActualizacion(vinosConActualizacion);
         }

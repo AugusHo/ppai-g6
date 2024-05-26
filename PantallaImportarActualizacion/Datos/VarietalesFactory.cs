@@ -15,8 +15,6 @@ namespace PantallaImportarActualizacion.Datos
             List<Entidades.TipoUva> tipoUvas = TipoUvaFactory.DatosTipoUva();
             List<Entidades.Varietal> varietales = new List<Entidades.Varietal>(); 
 
-            
-
             varietales.Add(new Entidades.Varietal("Un vino blanco fresco y afrutado.", "88", tipoUvas[0]));
             varietales.Add(new Entidades.Varietal("Un vino tinto robusto y complejo.", "12", tipoUvas[1]));
             varietales.Add(new Entidades.Varietal("Un vino tinto suave y aterciopelado.", "93", tipoUvas[2]));
