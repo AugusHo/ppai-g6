@@ -80,10 +80,11 @@ namespace PantallaImportarActualizacion.Entidades
                 bool vinoActual = allVinos[i].sosParaActualizar(allVinos[i].nombreVino, vinoAActualizar.nombreVino);
                 Console.WriteLine(allVinos[i]);
 
-                if (allVinos[i].bodegaVino.nombre == vinoAActualizar.bodegaVino.nombre)
+                //if (allVinos[i].bodegaVino.nombre == vinoAActualizar.bodegaVino.nombre)
+                if (vinoActual)
                 {
-                    if (vinoActual)
-                    {
+                    //if (vinoActual)
+                    
                         allVinos[i].setPrecio(vinoAActualizar.precioARSVino);
                         allVinos[i].setNotaCata(vinoAActualizar.notaDeCataBodegaVino);
                         allVinos[i].setImagenEtiqueta(vinoAActualizar.imagenEtiquetaVino);
@@ -92,13 +93,13 @@ namespace PantallaImportarActualizacion.Entidades
                         Console.WriteLine(listaFinalAct);
                         break;
                     }
-                    else
+                if (allVinos[i].bodegaVino.nombre == vinoAActualizar.bodegaVino.nombre && !vinoActual)
                     {
                         listaCreados.Add(vinoAActualizar);
                         Console.WriteLine(listaCreados);
-                        //break;
+                        break;
                     }
-                }
+                
             }
         }
     }
