@@ -228,8 +228,10 @@ namespace PantallaImportarActualizacion.Entidades
                 if (enofilos[i].esSeguidor(bodegaSeleccionada.nombreBodega))
                 {
                     string nombreEnofilo = enofilos[i].getNombreUsuario();
+                    Console.WriteLine(nombreEnofilo);
                     listaNombreEnofilosSuscriptos.Add(nombreEnofilo);
                     Console.WriteLine(listaNombreEnofilosSuscriptos);
+                    
                 };
             }
 
