@@ -100,5 +100,11 @@ namespace PantallaImportarActualizacion.Entidades
                 Console.WriteLine(listaCreados);
             }
         }
+
+        public void setFechaUltimaActualizacion(string fechaActual)
+        {
+            this.fechaUltimaActualizacion = fechaActual;
+            Console.WriteLine(this.fechaUltimaActualizacion);
+        }
     }
 }

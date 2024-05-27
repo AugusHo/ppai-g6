@@ -77,6 +77,7 @@ namespace PantallaImportarActualizacion.Entidades
             obtenerActualizaciones();
             buscarVinosAActualizar();
             actualizarOCrearVinos(listaVinosAActualizar, listaNuevosVinos);
+            setFechaUltimaActualizacion(getFechaActual(), bodegaSeleccionada);
             pantalla.mostarResumen(listaFinalVinos, bodegaSeleccionada.nombreBodega);
         }
 
@@ -200,6 +201,12 @@ namespace PantallaImportarActualizacion.Entidades
             vinos.Add(nuevoVino);
             listaFinalVinos.Add(nuevoVino);
         }
+
+        public void setFechaUltimaActualizacion(string fechaActual, Bodega bodegaSeleccionada)
+        {
+            bodegaSeleccionada.setFechaUltimaActualizacion(fechaActual);
+        }
+
 
 
 

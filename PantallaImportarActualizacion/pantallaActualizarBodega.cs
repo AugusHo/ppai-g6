@@ -27,7 +27,9 @@ namespace PantallaImportarActualizacion
         {
             habilitarPantalla();
             cmbBodegas.DataSource =  gestor.OpcionImportarActualizacionVinos();
-           
+            Console.WriteLine(cmbBodegas.DataSource);
+
+
 
         }
 
