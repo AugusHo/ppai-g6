@@ -11,7 +11,7 @@ namespace PantallaImportarActualizacion.Entidades
         private bool periodoActualizacion;
         private int coordenadasUbicacion;
         private string fechaUltimaActualizacion;
-        //public Vino vino { get; set; }
+        
         
 
         public Bodega(string descripcionBodega, string historiaBodega, string nombreBodega, bool periodoActualizacionBodega, int coordenadasUbicacionBodega, string fechaUltimaActualizacionBodega)

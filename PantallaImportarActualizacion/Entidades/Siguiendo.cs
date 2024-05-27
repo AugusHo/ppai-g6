@@ -4,26 +4,26 @@ namespace PantallaImportarActualizacion.Entidades
 {
     public class Siguiendo
     {
-        private DateTime fechaFin;
-        private DateTime fechaInicio;
+        private string fechaFin;
+        private string fechaInicio;
         private Bodega bodega;
         private Enofilo amigo;
 
-        public Siguiendo(DateTime fechaFinSiguiendo, DateTime fechaInicioSiguiendo, Bodega bodegaSiguiendo, Enofilo amigoEnofilo)
+        public Siguiendo(string fechaFinSiguiendo, string fechaInicioSiguiendo, Bodega bodegaSiguiendo, Enofilo amigoE)
         {
             fechaFin = fechaFinSiguiendo;
             fechaInicio = fechaInicioSiguiendo;
             bodega = bodegaSiguiendo;
-            amigo = amigoEnofilo;
+            amigo = amigoE;
         }
 
-        public DateTime fechaFinSiguiendo
+        public string fechaFinSiguiendo
         {
             get => fechaFin;
             set => fechaFin = value;
         }
 
-        public DateTime fechaInicioSiguiendo
+        public string fechaInicioSiguiendo
         {
             get => fechaInicio;
             set => fechaInicio = value;
@@ -35,10 +35,16 @@ namespace PantallaImportarActualizacion.Entidades
             set => bodega = value;
         }
 
-        public Enofilo amigoEnofilo
+        public Enofilo amigoE
         {
             get => amigo;
             set => amigo = value;
+        }
+
+        public bool sosDeBodega(string nombreBodega)
+        {
+            if (bodega.nombreBodega == nombreBodega) { return true; }
+            return false;
         }
     }
 }

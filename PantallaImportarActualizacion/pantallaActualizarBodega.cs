@@ -26,7 +26,7 @@ namespace PantallaImportarActualizacion
         private void opcionImportarActualizacionVino_Click(object sender, EventArgs e)
         {
             habilitarPantalla();
-            cmbBodegas.DataSource =  gestor.OpcionImportarActualizacionVinos();
+            cmbBodegas.DataSource = gestor.OpcionImportarActualizacionVinos();
             Console.WriteLine(cmbBodegas.DataSource);
 
 

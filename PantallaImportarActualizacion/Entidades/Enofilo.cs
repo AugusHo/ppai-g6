@@ -1,44 +1,74 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace PantallaImportarActualizacion.Entidades
 {
     public class Enofilo
     {
         private string apellido;
-        private string nombre;
         private string imagenPerfil;
-        private List<Siguiendo> seguido;
+        private string nombre;
+        private Usuario usuario;
+        private List<Siguiendo> siguiendos;
 
-        public Enofilo(string apellidoEnofilo, string nombreEnofilo, string imagenPerfilEnofilo, List<Siguiendo> seguidoEnofilo)
+        public Enofilo(string apellidoE, string imagenPerfilE, string nombreE, Usuario usuarioE, List<Siguiendo> siguiendoE)
         {
-            apellido = apellidoEnofilo;
-            nombre = nombreEnofilo;
-            imagenPerfil = imagenPerfilEnofilo;
-            seguido = seguidoEnofilo;
+            apellido = apellidoE;
+            imagenPerfil = imagenPerfilE;
+            nombre = nombreE;
+            usuario = usuarioE;
+            siguiendos = siguiendoE;
         }
 
-        public string apellidoEnofilo
+        public string apellidoE
         {
             get => apellido;
             set => apellido = value;
         }
 
-        public string nombreEnofilo
-        {
-            get => nombre;
-            set => nombre = value;
-        }
-
-        public string imagenPerfilEnofilo
+        public string imagenPerfilE
         {
             get => imagenPerfil;
             set => imagenPerfil = value;
         }
 
-        public List<Siguiendo> seguidoEnofilo
+        public string nombreE
         {
-            get => seguido;
-            set => seguido = value;
+            get => nombre;
+            set => nombre = value;
+        }
+
+        public Usuario usuarioE
+        {
+            get => usuario;
+            set => usuario = value;
+        }
+
+        public List<Siguiendo> siguiendoE
+        {
+            get => siguiendos;
+            set => siguiendos = value;
+        }
+
+        public bool esSeguidor(string bodegaSeleccioda)
+        {
+            for (int i = 0; i < siguiendos.Count; i++)
+            {
+                if (siguiendos[i].sosDeBodega(bodegaSeleccioda))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public string getNombreUsuario()
+        {
+            return this.usuario.getNombre();
         }
     }
+
 }

@@ -14,6 +14,8 @@ namespace PantallaImportarActualizacion.Entidades
         private List<Vino> vinos;
         private List<Maridaje> maridajes;
         private List<TipoUva> tiposUva;
+        private List<Enofilo> enofilos;
+        
       
         private List<Vino> vinosConActualizacion;
         private List<Vino> listaVinosAActualizar;
@@ -21,6 +23,7 @@ namespace PantallaImportarActualizacion.Entidades
         private List<Vino> listaNuevosVinos;
         private List<Maridaje> listaNuevoVinoMaridaje;
         private List<TipoUva> listaNuevoVinoTU;
+        private List<String> listaNombreEnofilosSuscriptos;
         
 
         public GestorImportadorBodega(pantallaActualizarBodega pantalla)
@@ -35,6 +38,9 @@ namespace PantallaImportarActualizacion.Entidades
 
             //Llama a todas las tiposUva de la "base de datos"
             tiposUva = Datos.TipoUvaFactory.DatosTipoUva();
+
+            //Llama a todos los enofilos
+            enofilos = Datos.EnofiloFactory.DatosEnofilo();
 
             bodegasConActualizacion = new List<Bodega>();
 
@@ -54,14 +60,17 @@ namespace PantallaImportarActualizacion.Entidades
 
             listaNuevoVinoTU = new List<TipoUva>();
 
+            listaNombreEnofilosSuscriptos = new List<string>();
+
 
             this.pantalla = pantalla;
         }
 
+        
         public List<string> OpcionImportarActualizacionVinos()
         { 
             return buscarBodegasConActualizacionesPendientes();
-
+            Console.WriteLine(enofilos);
         }
        
         public List<string> buscarBodegasConActualizacionesPendientes()
@@ -79,7 +88,7 @@ namespace PantallaImportarActualizacion.Entidades
             actualizarOCrearVinos(listaVinosAActualizar, listaNuevosVinos);
             setFechaUltimaActualizacion(getFechaActual(), bodegaSeleccionada);
             pantalla.mostarResumen(listaFinalVinos, bodegaSeleccionada.nombreBodega);
-            enviarNotificacion();
+            enviarNotificacion(enofilos);
         }
 
         //poner debajo de tomarSeleccionBodega()
@@ -157,7 +166,7 @@ namespace PantallaImportarActualizacion.Entidades
             }
         }
 
-        //Anda
+
         public void buscarMaridaje(string nombreMaridaje, List<Maridaje> listaNuevoVinoM) {
             for (int i = 0; i < maridajes.Count; i++)
             {
@@ -212,8 +221,17 @@ namespace PantallaImportarActualizacion.Entidades
             bodegaSeleccionada.setFechaUltimaActualizacion(fechaActual);
         }
 
-        public void enviarNotificacion()
+        public void enviarNotificacion(List<Enofilo> enofilos)
         {
+            for (int i = 0; i < enofilos.Count; i++)
+            {
+                if (enofilos[i].esSeguidor(bodegaSeleccionada.nombreBodega))
+                {
+                    string nombreEnofilo = enofilos[i].getNombreUsuario();
+                    listaNombreEnofilosSuscriptos.Add(nombreEnofilo);
+                    Console.WriteLine(listaNombreEnofilosSuscriptos);
+                };
+            }
 
         }
 

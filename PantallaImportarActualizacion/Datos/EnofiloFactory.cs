@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace PantallaImportarActualizacion.Datos
 {
-    public class EnofiloFactory
+    public static class EnofiloFactory
     {
+        public static List<Entidades.Enofilo> DatosEnofilo()
+        {
+            List<Entidades.Enofilo> enofilos = new List<Entidades.Enofilo>();
+            List<Entidades.Usuario> usuarios = UsuarioFactory.DatosUsuario();
+            List<Entidades.Siguiendo> siguiendos = SiguiendosFactory.DatosSiguiendo();
+
+            enofilos.Add(new Entidades.Enofilo("a", "imagen500.png","b", usuarios[0], new List<Entidades.Siguiendo> { siguiendos[0] }));
+            //new List<Entidades.Siguiendo> { siguiendos[0] }
+
+
+            return enofilos;
+        }
     }
 }
+
