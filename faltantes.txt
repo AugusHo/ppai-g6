@@ -1,5 +1,4 @@
-Parte crear NuevoVino
 "Push"
 implementar alternativas:
-	- multiples galerias
-	- error al momento de conectarse con la "API"
+	- multiples galerias.
+	- no hay ninguna para actualizar.
