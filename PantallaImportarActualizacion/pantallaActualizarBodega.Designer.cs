@@ -34,14 +34,12 @@
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.dgBodega = new System.Windows.Forms.DataGridView();
             this.lblNombreBodega = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dgBodega)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // opcionImportarActualizacionVino
             // 
-            this.opcionImportarActualizacionVino.Location = new System.Drawing.Point(528, 83);
+            this.opcionImportarActualizacionVino.Location = new System.Drawing.Point(22, 12);
             this.opcionImportarActualizacionVino.Name = "opcionImportarActualizacionVino";
             this.opcionImportarActualizacionVino.Size = new System.Drawing.Size(232, 43);
             this.opcionImportarActualizacionVino.TabIndex = 0;
@@ -52,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(554, 142);
+            this.label1.Location = new System.Drawing.Point(33, 58);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 13);
             this.label1.TabIndex = 2;
@@ -61,14 +59,14 @@
             // cmbBodegas
             // 
             this.cmbBodegas.FormattingEnabled = true;
-            this.cmbBodegas.Location = new System.Drawing.Point(566, 158);
+            this.cmbBodegas.Location = new System.Drawing.Point(36, 74);
             this.cmbBodegas.Name = "cmbBodegas";
             this.cmbBodegas.Size = new System.Drawing.Size(121, 21);
             this.cmbBodegas.TabIndex = 4;
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(587, 197);
+            this.btnSeleccionar.Location = new System.Drawing.Point(36, 101);
             this.btnSeleccionar.Name = "btnSeleccionar";
             this.btnSeleccionar.Size = new System.Drawing.Size(75, 23);
             this.btnSeleccionar.TabIndex = 5;
@@ -81,7 +79,7 @@
             this.dgBodega.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgBodega.Location = new System.Drawing.Point(22, 241);
             this.dgBodega.Name = "dgBodega";
-            this.dgBodega.Size = new System.Drawing.Size(1200, 94);
+            this.dgBodega.Size = new System.Drawing.Size(1200, 243);
             this.dgBodega.TabIndex = 6;
             // 
             // lblNombreBodega
@@ -94,20 +92,11 @@
             this.lblNombreBodega.TabIndex = 7;
             this.lblNombreBodega.Text = "label2";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 364);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1200, 94);
-            this.dataGridView1.TabIndex = 8;
-            // 
             // pantallaActualizarBodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 552);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.lblNombreBodega);
             this.Controls.Add(this.dgBodega);
             this.Controls.Add(this.btnSeleccionar);
@@ -118,7 +107,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Administracion Vinos";
             ((System.ComponentModel.ISupportInitialize)(this.dgBodega)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,7 +120,6 @@
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridView dgBodega;
         private System.Windows.Forms.Label lblNombreBodega;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

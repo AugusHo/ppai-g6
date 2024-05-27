@@ -95,8 +95,7 @@ namespace PantallaImportarActualizacion.Entidades
             }
             Console.WriteLine(listaVinosAActualizar);
         }
-        // -------------------------------------------------------------------------------------------------------------------------------------- 
-        //hasta aca anda
+ 
         public String getFechaActual()
         {
             DateTime fechaActual = DateTime.Now;
@@ -146,17 +145,20 @@ namespace PantallaImportarActualizacion.Entidades
             }
         }
 
+        //Anda
         public void buscarMaridaje(string nombreMaridaje, List<Maridaje> listaNuevoVinoM) {
             for (int i = 0; i < maridajes.Count; i++)
             {
                 if (maridajes[i].sosMaridaje(nombreMaridaje, maridajes[i].nombreMaridaje))
                 {
                     listaNuevoVinoM.Add(maridajes[i]);
+                    Console.WriteLine(listaNuevoVinoM);
                 };
 
             }
         }
 
+        //No Anda
         public void buscarTipoUva(string nombreTipoUva, List<TipoUva> listaNuevoVinoTU)
         {
             for (int i = 0; i < tiposUva.Count; i++)
@@ -170,8 +172,10 @@ namespace PantallaImportarActualizacion.Entidades
 
         public void crearNuevoVino(Vino creado, List<Maridaje> listaNuevoVinoMaridaje, List<TipoUva> listaNuevoVinoTU)
         {
+            Console.WriteLine(listaNuevoVinoMaridaje);
             Vino nuevoVino = new Vino(creado.añadaVino, creado.imagenEtiquetaVino, creado.nombreVino, creado.notaDeCataBodegaVino, creado.precioARSVino, creado.bodegaVino, listaNuevoVinoMaridaje, getFechaActual(), creado.varietalVino);
-            //vinos.Add(nuevoVino);
+            vinos.Add(nuevoVino);
+            Console.WriteLine(nuevoVino);
             listaFinalVinos.Add(nuevoVino);
 
         }

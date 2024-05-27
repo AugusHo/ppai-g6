@@ -14,7 +14,8 @@ namespace PantallaImportarActualizacion.Datos
             List<Entidades.Maridaje> maridajes = MaridajeFactory.DatosMaridajes();
             List<Entidades.Vino> vinosConActualizacion = new List<Entidades.Vino>();
             List<Entidades.Varietal> varietales = VarietalFactory.DatosVarietal();
-            List<Entidades.Varietal> varietalesNuevos = VarietalFactory.DatosVarietal();
+            //hace falta crearlo bien:
+            List<Entidades.Varietal> varietalesNuevos = new List<Entidades.Varietal>();
             List<Entidades.TipoUva> tiposUvaNuevos = TipoUvaFactory.DatosTipoUva();
 
             //Nuevos varietales:

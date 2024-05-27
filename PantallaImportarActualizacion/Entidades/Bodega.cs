@@ -83,12 +83,12 @@ namespace PantallaImportarActualizacion.Entidades
 
                 if (vinoActual && allVinos[i].bodegaVino.nombre == vinoAActualizar.bodegaVino.nombre)
                 {
-                    // Actualizar los datos del vino existente
                     allVinos[i].setPrecio(vinoAActualizar.precioARSVino);
                     allVinos[i].setNotaCata(vinoAActualizar.notaDeCataBodegaVino);
                     allVinos[i].setImagenEtiqueta(vinoAActualizar.imagenEtiquetaVino);
                     allVinos[i].setFechaActualizacion(fechaActual);
                     listaFinalAct.Add(allVinos[i]);
+                    Console.WriteLine(listaFinalAct);
                     vinoEncontrado = true;
                     break;
                 }
@@ -96,8 +96,8 @@ namespace PantallaImportarActualizacion.Entidades
 
             if (!vinoEncontrado)
             {
-                // Si no se encontró el vino, agregarlo a la lista de creados
                 listaCreados.Add(vinoAActualizar);
+                Console.WriteLine(listaCreados);
             }
         }
     }
