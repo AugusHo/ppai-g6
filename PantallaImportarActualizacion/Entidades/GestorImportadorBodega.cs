@@ -158,7 +158,6 @@ namespace PantallaImportarActualizacion.Entidades
             }
         }
 
-        //No Anda
         public void buscarTipoUva(string nombreTipoUva, List<TipoUva> listaNuevoVinoTU)
         {
             for (int i = 0; i < tiposUva.Count; i++)
@@ -166,18 +165,34 @@ namespace PantallaImportarActualizacion.Entidades
                 if (tiposUva[i].sosTipoUva(nombreTipoUva, tiposUva[i].nombreUva))
                 {
                     listaNuevoVinoTU.Add(tiposUva[i]);
+                    Console.WriteLine(listaNuevoVinoTU);
                 }
             }
         }
 
         public void crearNuevoVino(Vino creado, List<Maridaje> listaNuevoVinoMaridaje, List<TipoUva> listaNuevoVinoTU)
         {
-            Console.WriteLine(listaNuevoVinoMaridaje);
-            Vino nuevoVino = new Vino(creado.añadaVino, creado.imagenEtiquetaVino, creado.nombreVino, creado.notaDeCataBodegaVino, creado.precioARSVino, creado.bodegaVino, listaNuevoVinoMaridaje, getFechaActual(), creado.varietalVino);
-            vinos.Add(nuevoVino);
-            Console.WriteLine(nuevoVino);
-            listaFinalVinos.Add(nuevoVino);
+            // Crear una nueva lista de maridajes basada en la lista proporcionada
+            var nuevaListaMaridaje = new List<Maridaje>(listaNuevoVinoMaridaje);
 
+            // Crear una nueva lista de varietales basada en la lista del vino creado
+            var nuevaListaVarietales = new List<Varietal>(creado.varietalVino);
+
+            // Crear el nuevo vino con las nuevas listas
+            Vino nuevoVino = new Vino(
+                creado.añadaVino,
+                creado.imagenEtiquetaVino,
+                creado.nombreVino,
+                creado.notaDeCataBodegaVino,
+                creado.precioARSVino,
+                creado.bodegaVino,
+                nuevaListaMaridaje,
+                getFechaActual(),
+                nuevaListaVarietales
+            );
+
+            vinos.Add(nuevoVino);
+            listaFinalVinos.Add(nuevoVino);
         }
 
 
