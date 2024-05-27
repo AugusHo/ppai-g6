@@ -48,7 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\BodegaFactory.cs" />
+    <Compile Include="Datos\EnofiloFactory.cs" />
     <Compile Include="Datos\MaridajeFactory.cs" />
+    <Compile Include="Datos\SiguiendoFactory.cs" />
     <Compile Include="Datos\TipoUvaFactory.cs" />
     <Compile Include="Datos\VarietalesFactory.cs" />
     <Compile Include="Datos\VinoFactoy.cs" />
