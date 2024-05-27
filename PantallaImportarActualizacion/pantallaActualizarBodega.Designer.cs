@@ -39,7 +39,7 @@
             // 
             // opcionImportarActualizacionVino
             // 
-            this.opcionImportarActualizacionVino.Location = new System.Drawing.Point(22, 12);
+            this.opcionImportarActualizacionVino.Location = new System.Drawing.Point(492, 34);
             this.opcionImportarActualizacionVino.Name = "opcionImportarActualizacionVino";
             this.opcionImportarActualizacionVino.Size = new System.Drawing.Size(232, 43);
             this.opcionImportarActualizacionVino.TabIndex = 0;
@@ -50,7 +50,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(33, 58);
+            this.label1.Location = new System.Drawing.Point(524, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 13);
             this.label1.TabIndex = 2;
@@ -59,16 +59,16 @@
             // cmbBodegas
             // 
             this.cmbBodegas.FormattingEnabled = true;
-            this.cmbBodegas.Location = new System.Drawing.Point(36, 74);
+            this.cmbBodegas.Location = new System.Drawing.Point(492, 123);
             this.cmbBodegas.Name = "cmbBodegas";
-            this.cmbBodegas.Size = new System.Drawing.Size(121, 21);
+            this.cmbBodegas.Size = new System.Drawing.Size(232, 21);
             this.cmbBodegas.TabIndex = 4;
             // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(36, 101);
+            this.btnSeleccionar.Location = new System.Drawing.Point(527, 164);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(75, 23);
+            this.btnSeleccionar.Size = new System.Drawing.Size(131, 34);
             this.btnSeleccionar.TabIndex = 5;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;

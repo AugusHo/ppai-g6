@@ -58,6 +58,12 @@ namespace PantallaImportarActualizacion.Entidades
             this.pantalla = pantalla;
         }
 
+        public List<string> OpcionImportarActualizacionVinos()
+        { 
+            return buscarBodegasConActualizacionesPendientes();
+
+        }
+       
         public List<string> buscarBodegasConActualizacionesPendientes()
         {
             bodegasConActualizacion = bodegas.Where(x => x.estaParaActualizarNovedadesVino()).ToList();

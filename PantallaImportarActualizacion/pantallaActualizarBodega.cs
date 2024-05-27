@@ -22,10 +22,12 @@ namespace PantallaImportarActualizacion
             gestor = new GestorImportadorBodega(this);
         }
 
+        //Inicio del CU
         private void opcionImportarActualizacionVino_Click(object sender, EventArgs e)
         {
             habilitarPantalla();
-            cmbBodegas.DataSource = gestor.buscarBodegasConActualizacionesPendientes();
+            cmbBodegas.DataSource =  gestor.OpcionImportarActualizacionVinos();
+           
 
         }
 
