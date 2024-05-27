@@ -21,7 +21,7 @@ namespace PantallaImportarActualizacion.Entidades
         private List<Vino> listaNuevosVinos;
         private List<Maridaje> listaNuevoVinoMaridaje;
         private List<TipoUva> listaNuevoVinoTU;
-        //private bool validar;
+        
 
         public GestorImportadorBodega(pantallaActualizarBodega pantalla)
         {
@@ -116,9 +116,13 @@ namespace PantallaImportarActualizacion.Entidades
         {
             //Parte de Actualizar
             actualizarVino(listaVinosAActualizar);
-            //Parte de Crear
-            crearVino(listaNuevosVinos);
-            //Console.WriteLine(listaNuevosVinos);
+            //Parte de Crear (solo se ejecuta si hay vinos suevos sin crear)
+            Console.WriteLine(listaNuevosVinos);
+            if (listaNuevosVinos.Count != 0)
+            {
+                crearVino(listaNuevosVinos);
+            }
+            Console.WriteLine(listaNuevosVinos);
         }
 
         public void actualizarVino(List<Vino> listaVinosAActualizar)
