@@ -9,7 +9,7 @@ namespace PantallaImportarActualizacion
 {
     public partial class pantallaActualizarBodega : Form
     {
-        private GestorImportadorBodega gestor;
+        private GestorImportadorBodega gestor; 
 
         public pantallaActualizarBodega()
         {
@@ -22,7 +22,6 @@ namespace PantallaImportarActualizacion
             gestor = new GestorImportadorBodega(this);
         }
 
-        //Inicio del CU
         private void opcionImportarActualizacionVino_Click(object sender, EventArgs e)
         {
             habilitarPantalla();

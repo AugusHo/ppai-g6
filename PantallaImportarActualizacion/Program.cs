@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PantallaImportarActualizacion.Entidades;
 
 namespace PantallaImportarActualizacion
 {
-    static class Program
+    internal static class Program
     {
         /// <summary>
         /// Punto de entrada principal para la aplicación.
@@ -17,6 +18,17 @@ namespace PantallaImportarActualizacion
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new pantallaActualizarBodega());
+
+            //inicioCasoUso();
         }
+
+        /*static void inicioCasoUso()
+        {
+            pantallaActualizarBodega pantalla = new pantallaActualizarBodega();
+            InterfazNotificacionPush interfaz = new InterfazNotificacionPush();
+            GestorImportadorBodega gestor = new GestorImportadorBodega(pantalla, interfaz);
+
+            
+        }*/
     }
 }

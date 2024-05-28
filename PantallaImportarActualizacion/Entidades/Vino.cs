@@ -110,5 +110,19 @@ namespace PantallaImportarActualizacion.Entidades
         {
             this.fechaActualizacion = fechaActual;
         }
+
+        public Varietal crearVarietal( List<TipoUva> listaNuevoVinoTU, Varietal creadoVarietal)
+        {
+            for (int i = 0; i < listaNuevoVinoTU.Count; i++) {
+                
+                if (listaNuevoVinoTU[i].nombreUva == creadoVarietal.tipoUvaVarietal.nombreUva)
+                {
+                    Varietal nuevoVarietal = new Varietal(creadoVarietal.descripcionVarietal, creadoVarietal.porcentajeTiposUvaVarietal, listaNuevoVinoTU[i]);
+                    return nuevoVarietal;
+                }
+
+            }
+            return null;
+        }
     }
 }

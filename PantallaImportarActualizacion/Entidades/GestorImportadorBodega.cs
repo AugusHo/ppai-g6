@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Windows.Forms;
 
 namespace PantallaImportarActualizacion.Entidades
 {
     class GestorImportadorBodega
     {
         private pantallaActualizarBodega pantalla;
-        //private PantallaNotificacion pantallaNotificacion;
+        private InterfazNotificacionPush interfazNotificacion;
         private List<Bodega> bodegas;
         private List<Bodega> bodegasConActualizacion;
         private Bodega bodegaSeleccionada;
@@ -17,7 +18,6 @@ namespace PantallaImportarActualizacion.Entidades
         private List<TipoUva> tiposUva;
         private List<Enofilo> enofilos;
         
-      
         private List<Vino> vinosConActualizacion;
         private List<Vino> listaVinosAActualizar;
         private List<Vino> listaFinalVinos;
@@ -27,7 +27,7 @@ namespace PantallaImportarActualizacion.Entidades
         private List<String> listaNombreEnofilosSuscriptos;
         
 
-        public GestorImportadorBodega(pantallaActualizarBodega pantalla)
+        public GestorImportadorBodega(pantallaActualizarBodega pantalla )//InterfazNotificacionPush interfazNotificacion
         {
             Random random = new Random();
             int randomValue = random.Next(2);
@@ -43,7 +43,10 @@ namespace PantallaImportarActualizacion.Entidades
                 bodegas = Datos.BodegaFactory.DatosBodegas();
             }
 
-            
+             
+           
+
+            this.pantalla = pantalla;
 
             //Llama a todos los vinos de la "base de datos"
             vinos = Datos.VinoFactoy.DatosVinos();
@@ -77,16 +80,14 @@ namespace PantallaImportarActualizacion.Entidades
 
             listaNombreEnofilosSuscriptos = new List<string>();
 
-
-            this.pantalla = pantalla;
-            //this.pantallaNotificacion = pantallaNot;
+            
+            
         }
 
         
         public List<string> OpcionImportarActualizacionVinos()
         { 
             return buscarBodegasConActualizacionesPendientes();
-            Console.WriteLine(enofilos);
         }
        
         public List<string> buscarBodegasConActualizacionesPendientes()
@@ -105,6 +106,7 @@ namespace PantallaImportarActualizacion.Entidades
             setFechaUltimaActualizacion(getFechaActual(), bodegaSeleccionada);
             pantalla.mostarResumen(listaFinalVinos, bodegaSeleccionada.nombreBodega);
             enviarNotificacion(enofilos);
+            //finCasoUso();
         }
 
         //poner debajo de tomarSeleccionBodega()
@@ -213,7 +215,16 @@ namespace PantallaImportarActualizacion.Entidades
             var nuevaListaMaridaje = new List<Maridaje>(listaNuevoVinoMaridaje);
 
             // Crear una nueva lista de varietales basada en la lista del vino creado
-            var nuevaListaVarietales = new List<Varietal>(creado.varietalVino);
+            //var nuevaListaVarietales = new List<Varietal>(creado.varietalVino);
+
+            var nuevaListaVarietales = new List<Varietal>();
+            for (int i = 0; i < creado.varietalVino.Count; i++)
+            {
+                Varietal nuevoVarietal = creado.crearVarietal(listaNuevoVinoTU, creado.varietalVino[i]);
+                nuevaListaVarietales.Add(nuevoVarietal);
+                Console.WriteLine(nuevaListaVarietales);
+                Console.WriteLine(creado);
+            }
 
             // Crear el nuevo vino con las nuevas listas
             Vino nuevoVino = new Vino(
@@ -230,6 +241,7 @@ namespace PantallaImportarActualizacion.Entidades
 
             vinos.Add(nuevoVino);
             listaFinalVinos.Add(nuevoVino);
+            Console.WriteLine(nuevoVino);
         }
 
         public void setFechaUltimaActualizacion(string fechaActual, Bodega bodegaSeleccionada)
@@ -239,6 +251,9 @@ namespace PantallaImportarActualizacion.Entidades
 
         public void enviarNotificacion(List<Enofilo> enofilos)
         {
+
+            InterfazNotificacionPush interfazNotificacion = new InterfazNotificacionPush();
+
             for (int i = 0; i < enofilos.Count; i++)
             {
                 if (enofilos[i].esSeguidor(bodegaSeleccionada.nombreBodega))
@@ -247,10 +262,19 @@ namespace PantallaImportarActualizacion.Entidades
                     Console.WriteLine(nombreEnofilo);
                     listaNombreEnofilosSuscriptos.Add(nombreEnofilo);
                     Console.WriteLine(listaNombreEnofilosSuscriptos);
-                    //aca se envia la noficacion
                 };
             }
 
+            for (int j = 0; j < enofilos.Count; j++)
+            {
+                interfazNotificacion.enviarNotificacionPush();
+            }
+
+        }
+
+        public void finCasoUso()
+        {
+            Application.Exit();
         }
 
 

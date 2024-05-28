@@ -15,9 +15,7 @@ namespace PantallaImportarActualizacion.Datos
             List<Entidades.Siguiendo> siguiendos = SiguiendosFactory.DatosSiguiendo();
 
             enofilos.Add(new Entidades.Enofilo("Perez", "imagen500.png","Jose", usuarios[0], new List<Entidades.Siguiendo> { siguiendos[0] }));
-            //new List<Entidades.Siguiendo> { siguiendos[0] }
-
-
+          
             return enofilos;
         }
     }

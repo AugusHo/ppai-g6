@@ -32,7 +32,7 @@ namespace PantallaImportarActualizacion.Datos
             vinosConActualizacion.Add(new Entidades.Vino("2017", "imagen300.jpg", "Vino Rosado", 5, 9101.25f, bodegas[2], new List<Entidades.Maridaje> { maridajes[4], maridajes[5] }, "no se actualizo", new List<Entidades.Varietal> { varietales[4], varietales[5] }));
             vinosConActualizacion.Add(new Entidades.Vino("2021", "imagen400.jpg", "Vino Blanco Sauvignon", 4 , 5496.98f, bodegas[2], new List<Entidades.Maridaje> { maridajes[0], maridajes[1] }, "2023, 5, 23", new List<Entidades.Varietal> { varietales[4], varietales[5] }));
             //Vinos para crear
-            vinosConActualizacion.Add(new Entidades.Vino("2019", "imagen200.jpg", "Vino Blanco Vladimmir", 3, 5678.9f, bodegas[0], new List<Entidades.Maridaje> { maridajes[2], maridajes[3] }, "no se actualizo", new List<Entidades.Varietal> { varietalesNuevos[0], varietalesNuevos[1] }));
+            vinosConActualizacion.Add(new Entidades.Vino("2009", "imagen200.jpg", "Vino Blanco Vladimmir", 3, 5678.9f, bodegas[0], new List<Entidades.Maridaje> { maridajes[2], maridajes[3] }, "no se actualizo", new List<Entidades.Varietal> { varietalesNuevos[0], varietalesNuevos[1] }));
             vinosConActualizacion.Add(new Entidades.Vino("2001", "imagen400.jpg", "Vino Negro Asabache", 2, 3456.70f, bodegas[2], new List<Entidades.Maridaje> { maridajes[0], maridajes[1] },"no se actualizo", new List<Entidades.Varietal> { varietalesNuevos[2], varietalesNuevos[3] }));
 
             return getActualizacion(vinosConActualizacion);

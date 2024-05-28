@@ -66,6 +66,12 @@
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Entidades\Varietal.cs" />
     <Compile Include="Entidades\Vino.cs" />
+    <Compile Include="InterfazNotificacionPush.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InterfazNotificacionPush.Designer.cs">
+      <DependentUpon>InterfazNotificacionPush.cs</DependentUpon>
+    </Compile>
     <Compile Include="pantallaActualizarBodega.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="InterfazNotificacionPush.resx">
+      <DependentUpon>InterfazNotificacionPush.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="pantallaActualizarBodega.resx">
       <DependentUpon>pantallaActualizarBodega.cs</DependentUpon>
     </EmbeddedResource>

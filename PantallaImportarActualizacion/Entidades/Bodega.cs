@@ -72,22 +72,22 @@ namespace PantallaImportarActualizacion.Entidades
             return false;
         }
 
-        public void actualizarDatosDeVino(Vino vinoAActualizar, List<Vino> allVinos, string fechaActual, List<Vino> listaFinalAct, List<Vino> listaCreados)
+        public void actualizarDatosDeVino(Vino vinoAActualizar, List<Vino> vinos, string fechaActual, List<Vino> listaFinalAct, List<Vino> listaCreados)
         {
             bool vinoEncontrado = false;
 
-            for (int i = 0; i < allVinos.Count; i++)
+            for (int i = 0; i < vinos.Count; i++)
             {
                 // Verifica que el vino de la api exista ya en la base de datos
-                bool vinoActual = allVinos[i].sosParaActualizar(allVinos[i].nombreVino, vinoAActualizar.nombreVino);
+                bool vinoActual = vinos[i].sosParaActualizar(vinos[i].nombreVino, vinoAActualizar.nombreVino);
 
-                if (vinoActual && allVinos[i].bodegaVino.nombre == vinoAActualizar.bodegaVino.nombre)
+                if (vinoActual && vinos[i].bodegaVino.nombre == vinoAActualizar.bodegaVino.nombre && vinos[i].añadaVino == vinoAActualizar.añadaVino)
                 {
-                    allVinos[i].setPrecio(vinoAActualizar.precioARSVino);
-                    allVinos[i].setNotaCata(vinoAActualizar.notaDeCataBodegaVino);
-                    allVinos[i].setImagenEtiqueta(vinoAActualizar.imagenEtiquetaVino);
-                    allVinos[i].setFechaActualizacion(fechaActual);
-                    listaFinalAct.Add(allVinos[i]);
+                    vinos[i].setPrecio(vinoAActualizar.precioARSVino);
+                    vinos[i].setNotaCata(vinoAActualizar.notaDeCataBodegaVino);
+                    vinos[i].setImagenEtiqueta(vinoAActualizar.imagenEtiquetaVino);
+                    vinos[i].setFechaActualizacion(fechaActual);
+                    listaFinalAct.Add(vinos[i]);
                     Console.WriteLine(listaFinalAct);
                     vinoEncontrado = true;
                     break;
