@@ -58,6 +58,12 @@ namespace PantallaImportarActualizacion.Entidades
 
         //Metodos
 
+        public string getNombre()
+        {
+            return this.nombre;
+        }
+
+
         public bool estaParaActualizarNovedadesVino()
         {
             return periodoActualizacion;

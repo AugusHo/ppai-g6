@@ -43,9 +43,6 @@ namespace PantallaImportarActualizacion.Entidades
                 bodegas = Datos.BodegaFactory.DatosBodegas();
             }
 
-             
-           
-
             this.pantalla = pantalla;
 
             //Llama a todos los vinos de la "base de datos"
@@ -80,12 +77,10 @@ namespace PantallaImportarActualizacion.Entidades
 
             listaNombreEnofilosSuscriptos = new List<string>();
 
-            
-            
         }
 
         
-        public List<string> OpcionImportarActualizacionVinos()
+        public List<string> opcionImportarActualizacionVinos()
         { 
             return buscarBodegasConActualizacionesPendientes();
         }
@@ -93,7 +88,9 @@ namespace PantallaImportarActualizacion.Entidades
         public List<string> buscarBodegasConActualizacionesPendientes()
         {
             bodegasConActualizacion = bodegas.Where(x => x.estaParaActualizarNovedadesVino()).ToList();
-            return bodegasConActualizacion.Select(x => x.nombreBodega).ToList();
+            //getNombre()
+            return bodegasConActualizacion.Select(x => x.getNombre()).ToList();
+
         }
 
         public void tomarSeleccionBodega(string seleccionBodega)

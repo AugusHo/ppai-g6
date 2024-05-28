@@ -22,20 +22,36 @@ namespace PantallaImportarActualizacion
             gestor = new GestorImportadorBodega(this);
         }
 
+        //Inicio del CU
         private void opcionImportarActualizacionVino_Click(object sender, EventArgs e)
         {
             habilitarPantalla();
-            if (gestor.buscarBodegasConActualizacionesPendientes().Count == 0)
+            List<String> bodegasConActualizacion = gestor.opcionImportarActualizacionVinos();
+            Console.WriteLine(bodegasConActualizacion);
+            mostrarYSolicitarBodegasConActualizacion(bodegasConActualizacion);
+
+            /*if (bodegasConActualizacion.Count == 0)
             {
                 MessageBox.Show("No hay bodegas para actualizar","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
+                //mostrarYSeleccionarBodegasConActualizacion()
+                clbBodegas.DataSource = gestor.buscarBodegasConActualizacionesPendientes();
+
+            }*/
+        }
+
+        private void mostrarYSolicitarBodegasConActualizacion(List<string> bodegasConActualizacion)
+        {
+            if (bodegasConActualizacion.Count == 0)
+            {
+                MessageBox.Show("No hay bodegas para actualizar", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
                 clbBodegas.DataSource = gestor.buscarBodegasConActualizacionesPendientes();
             }
-
-
-
         }
 
         public void habilitarPantalla()
@@ -62,9 +78,7 @@ namespace PantallaImportarActualizacion
                 gestor.tomarSeleccionBodega(bodegasSeleccionadas[i].ToString());
             }
 
-
         }
-
 
         public void mostarResumen(List<Vino> vinos, string nombreBodega)
         {
