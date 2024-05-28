@@ -18,3 +18,23 @@ C:\Users\Admin\Desktop\Nueva carpeta\ppai-g6\PantallaImportarActualizacion\obj\D
 C:\Users\Admin\Desktop\Nueva carpeta\ppai-g6\PantallaImportarActualizacion\obj\Debug\ImportarBodega.csproj.CoreCompileInputs.cache
 C:\Users\Admin\Desktop\Nueva carpeta\ppai-g6\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.exe
 C:\Users\Admin\Desktop\Nueva carpeta\ppai-g6\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.pdb
+C:\Users\Agustin Succar\Downloads\auigusyo\ppai-g6\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.exe.config
+C:\Users\Agustin Succar\Downloads\auigusyo\ppai-g6\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.exe
+C:\Users\Agustin Succar\Downloads\auigusyo\ppai-g6\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.pdb
+C:\Users\Agustin Succar\Downloads\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\ImportarBodega.csprojAssemblyReference.cache
+C:\Users\Agustin Succar\Downloads\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.pantallaActualizarBodega.resources
+C:\Users\Agustin Succar\Downloads\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.Properties.Resources.resources
+C:\Users\Agustin Succar\Downloads\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\ImportarBodega.csproj.GenerateResource.cache
+C:\Users\Agustin Succar\Downloads\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\ImportarBodega.csproj.CoreCompileInputs.cache
+C:\Users\Agustin Succar\Downloads\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.exe
+C:\Users\Agustin Succar\Downloads\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.pdb
+C:\Users\Admin\Desktop\Nueva carpeta (3)\auigusyo\ppai-g6\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.exe.config
+C:\Users\Admin\Desktop\Nueva carpeta (3)\auigusyo\ppai-g6\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.exe
+C:\Users\Admin\Desktop\Nueva carpeta (3)\auigusyo\ppai-g6\PantallaImportarActualizacion\bin\Debug\PantallaImportarActualizacion.pdb
+C:\Users\Admin\Desktop\Nueva carpeta (3)\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\ImportarBodega.csproj.AssemblyReference.cache
+C:\Users\Admin\Desktop\Nueva carpeta (3)\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.pantallaActualizarBodega.resources
+C:\Users\Admin\Desktop\Nueva carpeta (3)\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.Properties.Resources.resources
+C:\Users\Admin\Desktop\Nueva carpeta (3)\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\ImportarBodega.csproj.GenerateResource.cache
+C:\Users\Admin\Desktop\Nueva carpeta (3)\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\ImportarBodega.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Nueva carpeta (3)\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.exe
+C:\Users\Admin\Desktop\Nueva carpeta (3)\auigusyo\ppai-g6\PantallaImportarActualizacion\obj\Debug\PantallaImportarActualizacion.pdb

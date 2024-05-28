@@ -61,12 +61,6 @@
     <Compile Include="Entidades\Enofilo.cs" />
     <Compile Include="Entidades\GestorImportadorBodega.cs" />
     <Compile Include="Entidades\Maridaje.cs" />
-    <Compile Include="Entidades\PantallaNotificacion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Entidades\PantallaNotificacion.Designer.cs">
-      <DependentUpon>PantallaNotificacion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Entidades\Siguiendo.cs" />
     <Compile Include="Entidades\TipoUva.cs" />
     <Compile Include="Entidades\Usuario.cs" />

@@ -13,7 +13,7 @@ namespace PantallaImportarActualizacion.Datos
             List<Entidades.Siguiendo> siguiendos = new List<Entidades.Siguiendo>();
             List<Entidades.Bodega> bodegas = BodegaFactory.DatosBodegas();
 
-            siguiendos.Add(new Entidades.Siguiendo("", "20-5-2024", bodegas[0], null));
+            siguiendos.Add(new Entidades.Siguiendo("", "20-5-2022", bodegas[0], null));
             
 
 

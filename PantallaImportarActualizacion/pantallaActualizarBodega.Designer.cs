@@ -30,10 +30,10 @@
         {
             this.opcionImportarActualizacionVino = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbBodegas = new System.Windows.Forms.ComboBox();
             this.btnSeleccionar = new System.Windows.Forms.Button();
             this.dgBodega = new System.Windows.Forms.DataGridView();
             this.lblNombreBodega = new System.Windows.Forms.Label();
+            this.clbBodegas = new System.Windows.Forms.CheckedListBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgBodega)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,19 +56,11 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Seleccionar bodega a actualizar";
             // 
-            // cmbBodegas
-            // 
-            this.cmbBodegas.FormattingEnabled = true;
-            this.cmbBodegas.Location = new System.Drawing.Point(492, 123);
-            this.cmbBodegas.Name = "cmbBodegas";
-            this.cmbBodegas.Size = new System.Drawing.Size(232, 21);
-            this.cmbBodegas.TabIndex = 4;
-            // 
             // btnSeleccionar
             // 
-            this.btnSeleccionar.Location = new System.Drawing.Point(527, 164);
+            this.btnSeleccionar.Location = new System.Drawing.Point(538, 205);
             this.btnSeleccionar.Name = "btnSeleccionar";
-            this.btnSeleccionar.Size = new System.Drawing.Size(131, 34);
+            this.btnSeleccionar.Size = new System.Drawing.Size(120, 34);
             this.btnSeleccionar.TabIndex = 5;
             this.btnSeleccionar.Text = "Seleccionar";
             this.btnSeleccionar.UseVisualStyleBackColor = true;
@@ -92,15 +84,23 @@
             this.lblNombreBodega.TabIndex = 7;
             this.lblNombreBodega.Text = "label2";
             // 
+            // clbBodegas
+            // 
+            this.clbBodegas.FormattingEnabled = true;
+            this.clbBodegas.Location = new System.Drawing.Point(538, 105);
+            this.clbBodegas.Name = "clbBodegas";
+            this.clbBodegas.Size = new System.Drawing.Size(120, 94);
+            this.clbBodegas.TabIndex = 8;
+            // 
             // pantallaActualizarBodega
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1247, 552);
+            this.Controls.Add(this.clbBodegas);
             this.Controls.Add(this.lblNombreBodega);
             this.Controls.Add(this.dgBodega);
             this.Controls.Add(this.btnSeleccionar);
-            this.Controls.Add(this.cmbBodegas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.opcionImportarActualizacionVino);
             this.Name = "pantallaActualizarBodega";
@@ -116,10 +116,10 @@
 
         private System.Windows.Forms.Button opcionImportarActualizacionVino;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbBodegas;
         private System.Windows.Forms.Button btnSeleccionar;
         private System.Windows.Forms.DataGridView dgBodega;
         private System.Windows.Forms.Label lblNombreBodega;
+        private System.Windows.Forms.CheckedListBox clbBodegas;
     }
 }
 

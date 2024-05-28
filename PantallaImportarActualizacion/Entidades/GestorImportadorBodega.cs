@@ -8,6 +8,7 @@ namespace PantallaImportarActualizacion.Entidades
     class GestorImportadorBodega
     {
         private pantallaActualizarBodega pantalla;
+        //private PantallaNotificacion pantallaNotificacion;
         private List<Bodega> bodegas;
         private List<Bodega> bodegasConActualizacion;
         private Bodega bodegaSeleccionada;
@@ -28,7 +29,21 @@ namespace PantallaImportarActualizacion.Entidades
 
         public GestorImportadorBodega(pantallaActualizarBodega pantalla)
         {
-            bodegas = Datos.BodegaFactory.DatosBodegas();
+            Random random = new Random();
+            int randomValue = random.Next(2);
+            Console.WriteLine(randomValue);
+            if (randomValue == 0)
+            {
+                Console.WriteLine(randomValue);
+                bodegas = Datos.BodegaFactory.DatosBodegasFalsa();
+            }
+            else
+            {
+                Console.WriteLine(randomValue);
+                bodegas = Datos.BodegaFactory.DatosBodegas();
+            }
+
+            
 
             //Llama a todos los vinos de la "base de datos"
             vinos = Datos.VinoFactoy.DatosVinos();
@@ -64,6 +79,7 @@ namespace PantallaImportarActualizacion.Entidades
 
 
             this.pantalla = pantalla;
+            //this.pantallaNotificacion = pantallaNot;
         }
 
         
@@ -231,7 +247,7 @@ namespace PantallaImportarActualizacion.Entidades
                     Console.WriteLine(nombreEnofilo);
                     listaNombreEnofilosSuscriptos.Add(nombreEnofilo);
                     Console.WriteLine(listaNombreEnofilosSuscriptos);
-                    
+                    //aca se envia la noficacion
                 };
             }
 

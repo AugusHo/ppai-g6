@@ -14,7 +14,7 @@ namespace PantallaImportarActualizacion
         public pantallaActualizarBodega()
         {
             InitializeComponent();
-            cmbBodegas.Enabled = false;
+            clbBodegas.Enabled = false;
             btnSeleccionar.Enabled = false;
             dgBodega.Enabled = false;
             lblNombreBodega.Enabled = false;
@@ -26,8 +26,14 @@ namespace PantallaImportarActualizacion
         private void opcionImportarActualizacionVino_Click(object sender, EventArgs e)
         {
             habilitarPantalla();
-            cmbBodegas.DataSource = gestor.OpcionImportarActualizacionVinos();
-            Console.WriteLine(cmbBodegas.DataSource);
+            if (gestor.buscarBodegasConActualizacionesPendientes().Count == 0)
+            {
+                MessageBox.Show("No hay bodegas para actualizar","Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                clbBodegas.DataSource = gestor.buscarBodegasConActualizacionesPendientes();
+            }
 
 
 
@@ -35,7 +41,7 @@ namespace PantallaImportarActualizacion
 
         public void habilitarPantalla()
         {
-            cmbBodegas.Enabled = true;
+            clbBodegas.Enabled = true;
             btnSeleccionar.Enabled = true;
             dgBodega.Enabled = true;
             label1.Enabled = true;
@@ -43,12 +49,33 @@ namespace PantallaImportarActualizacion
 
         private void btnSeleccionar_Click(object sender, EventArgs e)
         {
-            gestor.tomarSeleccionBodega(cmbBodegas.SelectedItem.ToString());
+            //gestor.tomarSeleccionBodega(clbBodegas.SelectedItem.ToString());
+            if (dgBodega.Rows.Count > 0)
+            {
+                dgBodega.DataSource = null;  // Esto limpiará el DataGridView
+            }
+
+
+            List<string> bodegasSeleccionadas = clbBodegas.CheckedItems.Cast<string>().ToList();
+
+            for (int i = 0; i < bodegasSeleccionadas.Count; i++)
+            {
+                gestor.tomarSeleccionBodega(bodegasSeleccionadas[i].ToString());
+            }
+
+
         }
+
 
         public void mostarResumen(List<Vino> vinos, string nombreBodega)
         {
             List<VinoTabla> vinosTabla = this.Transformar(vinos);
+            var existingData = dgBodega.DataSource as List<VinoTabla>;
+
+            if (existingData != null)
+            {
+                vinosTabla.AddRange(existingData);
+            }
             dgBodega.DataSource = null;
             dgBodega.DataSource = vinosTabla;
             lblNombreBodega.Enabled = true;

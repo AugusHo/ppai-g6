@@ -14,7 +14,7 @@ namespace PantallaImportarActualizacion.Datos
             List<Entidades.Usuario> usuarios = UsuarioFactory.DatosUsuario();
             List<Entidades.Siguiendo> siguiendos = SiguiendosFactory.DatosSiguiendo();
 
-            enofilos.Add(new Entidades.Enofilo("a", "imagen500.png","b", usuarios[0], new List<Entidades.Siguiendo> { siguiendos[0] }));
+            enofilos.Add(new Entidades.Enofilo("Perez", "imagen500.png","Jose", usuarios[0], new List<Entidades.Siguiendo> { siguiendos[0] }));
             //new List<Entidades.Siguiendo> { siguiendos[0] }
 
 

@@ -14,7 +14,7 @@ namespace PantallaImportarActualizacion.Datos
             
             List<Usuario> usuarios = new List<Usuario>();
 
-            usuarios.Add(new Entidades.Usuario("Jose", 123456, true));
+            usuarios.Add(new Entidades.Usuario("JoseVinero", 123456, true));
             
             return usuarios;
             
