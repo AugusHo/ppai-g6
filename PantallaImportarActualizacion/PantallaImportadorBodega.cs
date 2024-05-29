@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace PantallaImportarActualizacion
 {
-    public partial class pantallaActualizarBodega : Form
+    public partial class PantallaImportadorBodega : Form
     {
         private GestorImportadorBodega gestor; 
 
-        public pantallaActualizarBodega()
+        public PantallaImportadorBodega()
         {
             InitializeComponent();
             clbBodegas.Enabled = false;

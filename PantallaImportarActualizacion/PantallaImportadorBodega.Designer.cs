@@ -1,6 +1,6 @@
 ﻿namespace PantallaImportarActualizacion
 {
-    partial class pantallaActualizarBodega
+    partial class PantallaImportadorBodega
     {
         /// <summary>
         /// Variable del diseñador necesaria.

@@ -11,8 +11,7 @@ namespace PantallaImportarActualizacion.Entidades
         private bool periodoActualizacion;
         private int coordenadasUbicacion;
         private string fechaUltimaActualizacion;
-        
-        
+     
 
         public Bodega(string descripcionBodega, string historiaBodega, string nombreBodega, bool periodoActualizacionBodega, int coordenadasUbicacionBodega, string fechaUltimaActualizacionBodega)
         {
@@ -54,6 +53,12 @@ namespace PantallaImportarActualizacion.Entidades
             set => coordenadasUbicacion = value;
         }
 
+        public string fechaUltimaActualizacionBodega
+        {
+            get => fechaUltimaActualizacion;
+            set => fechaUltimaActualizacion = value;
+        }
+
         public List<Bodega> bodegas { get; set; }
 
         //Metodos
@@ -62,7 +67,6 @@ namespace PantallaImportarActualizacion.Entidades
         {
             return this.nombre;
         }
-
 
         public bool estaParaActualizarNovedadesVino()
         {

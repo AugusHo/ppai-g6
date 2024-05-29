@@ -8,7 +8,7 @@ namespace PantallaImportarActualizacion.Entidades
 {
     class GestorImportadorBodega
     {
-        private pantallaActualizarBodega pantalla;
+        private PantallaImportadorBodega pantalla;
         private InterfazNotificacionPush interfazNotificacion;
         private List<Bodega> bodegas;
         private List<Bodega> bodegasConActualizacion;
@@ -27,7 +27,7 @@ namespace PantallaImportarActualizacion.Entidades
         private List<String> listaNombreEnofilosSuscriptos;
         
 
-        public GestorImportadorBodega(pantallaActualizarBodega pantalla )//InterfazNotificacionPush interfazNotificacion
+        public GestorImportadorBodega(PantallaImportadorBodega pantalla )//InterfazNotificacionPush interfazNotificacion
         {
             Random random = new Random();
             int randomValue = random.Next(2);
@@ -242,7 +242,9 @@ namespace PantallaImportarActualizacion.Entidades
 
         public void setFechaUltimaActualizacion(string fechaActual, Bodega bodegaSeleccionada)
         {
+            Console.WriteLine(bodegaSeleccionada);
             bodegaSeleccionada.setFechaUltimaActualizacion(fechaActual);
+            Console.WriteLine(bodegaSeleccionada);
         }
 
         public void enviarNotificacion(List<Enofilo> enofilos)

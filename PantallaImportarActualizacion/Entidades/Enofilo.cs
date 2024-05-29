@@ -12,7 +12,7 @@ namespace PantallaImportarActualizacion.Entidades
         private string imagenPerfil;
         private string nombre;
         private Usuario usuario;
-        private List<Siguiendo> siguiendos;
+        private List<Siguiendo> siguiendo;
 
         public Enofilo(string apellidoE, string imagenPerfilE, string nombreE, Usuario usuarioE, List<Siguiendo> siguiendoE)
         {
@@ -20,7 +20,7 @@ namespace PantallaImportarActualizacion.Entidades
             imagenPerfil = imagenPerfilE;
             nombre = nombreE;
             usuario = usuarioE;
-            siguiendos = siguiendoE;
+            siguiendo = siguiendoE;
         }
 
         public string apellidoE
@@ -49,15 +49,16 @@ namespace PantallaImportarActualizacion.Entidades
 
         public List<Siguiendo> siguiendoE
         {
-            get => siguiendos;
-            set => siguiendos = value;
+            get => siguiendo;
+            set => siguiendo = value;
         }
 
+        //Metodos
         public bool esSeguidor(string bodegaSeleccioda)
         {
-            for (int i = 0; i < siguiendos.Count; i++)
+            for (int i = 0; i < siguiendo.Count; i++)
             {
-                if (siguiendos[i].sosDeBodega(bodegaSeleccioda))
+                if (siguiendo[i].sosDeBodega(bodegaSeleccioda))
                 {
                     return true;
                 }

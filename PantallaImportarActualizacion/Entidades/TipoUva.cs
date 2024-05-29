@@ -23,6 +23,7 @@
             set => descripcion = value;
         }
 
+        //Metodo
         public bool sosTipoUva(string nombre, string nombreTU)
         {
             if (nombre == nombreTU) { return true; }

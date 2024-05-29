@@ -81,6 +81,7 @@ namespace PantallaImportarActualizacion.Entidades
             set => varietal = value;
         }
 
+        //Metodos
         public bool sosParaActualizar(string nombreAllVino, string nombreVinoAct)
         {
             if (string.IsNullOrWhiteSpace(nombreAllVino) || string.IsNullOrWhiteSpace(nombreVinoAct))

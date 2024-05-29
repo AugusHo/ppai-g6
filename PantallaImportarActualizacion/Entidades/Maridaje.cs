@@ -24,6 +24,7 @@
             set => nombre = value;
         }
 
+        //Metodos
         public bool sosMaridaje( string nombre, string nombreM)
         {
             if ( nombre == nombreM)

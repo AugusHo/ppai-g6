@@ -17,7 +17,7 @@ namespace PantallaImportarActualizacion
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new pantallaActualizarBodega());
+            Application.Run(new PantallaImportadorBodega());
 
            
         }
