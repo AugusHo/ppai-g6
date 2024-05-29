@@ -19,16 +19,7 @@ namespace PantallaImportarActualizacion
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new pantallaActualizarBodega());
 
-            //inicioCasoUso();
+           
         }
-
-        /*static void inicioCasoUso()
-        {
-            pantallaActualizarBodega pantalla = new pantallaActualizarBodega();
-            InterfazNotificacionPush interfaz = new InterfazNotificacionPush();
-            GestorImportadorBodega gestor = new GestorImportadorBodega(pantalla, interfaz);
-
-            
-        }*/
     }
 }

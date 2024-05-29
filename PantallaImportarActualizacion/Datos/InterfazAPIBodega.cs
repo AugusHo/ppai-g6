@@ -38,10 +38,10 @@ namespace PantallaImportarActualizacion.Datos
             return getActualizacion(vinosConActualizacion);
         }
 
-        public static List<Entidades.Vino> getActualizacion(List<Entidades.Vino> vinos)
+        public static List<Entidades.Vino> getActualizacion(List<Entidades.Vino> vinosConActualizacion)
         {
-            //List<Entidades.Vino> actualizaciones = ObtenerActualizaciones();
-            return vinos;
+         
+            return vinosConActualizacion;
         }
 
     }

@@ -121,7 +121,6 @@ namespace PantallaImportarActualizacion.Entidades
                 if (validar)
                 {
                     listaVinosAActualizar.Add(vinosConActualizacion[i]);
-                 
                 }
                 
             }
@@ -262,7 +261,7 @@ namespace PantallaImportarActualizacion.Entidades
                 };
             }
 
-            for (int j = 0; j < enofilos.Count; j++)
+            for (int j = 0; j < listaNombreEnofilosSuscriptos.Count; j++)
             {
                 interfazNotificacion.enviarNotificacionPush();
             }

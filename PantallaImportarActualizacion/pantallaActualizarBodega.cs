@@ -62,7 +62,7 @@ namespace PantallaImportarActualizacion
             label1.Enabled = true;
         }
 
-        private void btnSeleccionar_Click(object sender, EventArgs e)
+        private void tomarSeleccionBodega_Click(object sender, EventArgs e)
         {
             //gestor.tomarSeleccionBodega(clbBodegas.SelectedItem.ToString());
             if (dgBodega.Rows.Count > 0)
